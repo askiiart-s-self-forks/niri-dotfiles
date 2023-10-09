@@ -1,0 +1,6 @@
+# Stuff to go in the init script for every shell (.bashrc, .zshrc, .config/fish/config.fish, etc.)
+#alias docker="podman"
+alias docker="sudo docker"
+alias ls="ls --color=auto -CF"
+alias ll="ls -l"
+alias la="ls -a"
