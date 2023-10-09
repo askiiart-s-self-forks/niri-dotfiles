@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 rm -rf $HOME/.config/fish/
