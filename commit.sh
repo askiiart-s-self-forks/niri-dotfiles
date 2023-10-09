@@ -3,5 +3,5 @@ set -e
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 cd $GIT_DIR
 git add .
-git commit -m "Automated backup: $(date +'%Y-%m-%d %H:%M:%S')"
+git commit -m "Automated backup: $(date --rfc-3339=s --utc)"
 git push origin main
