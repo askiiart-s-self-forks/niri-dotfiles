@@ -4,3 +4,4 @@ alias docker="sudo docker"
 alias ls="ls --color=auto -CF"
 alias ll="ls -l"
 alias la="ls -a"
+gpgconf --launch gpg-agent
