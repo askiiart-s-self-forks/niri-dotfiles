@@ -5,4 +5,4 @@ cd $GIT_DIR
 ./backup.sh
 git add .
 git commit -m "Automated backup: $(date --rfc-3339=s --utc)"
-git push origin main
+git push
