@@ -6,3 +6,4 @@ My dotfiles for:
   - other shells in the future maybe?
 - kitty
 - nvim
+- gpg
