@@ -1,6 +1,8 @@
 # Stuff to go in the init script for every shell (.bashrc, .zshrc, .config/fish/config.fish, etc.)
 #alias docker="podman"
-alias docker="sudo docker"
+#alias docker="sudo docker"
+alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
+
 alias ls="ls --color=auto -CF"
 alias ll="ls -l"
 alias la="ls -a"
