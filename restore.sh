@@ -6,10 +6,16 @@ rm -rf $HOME/.config/kitty/
 rm -rf $HOME/.config/nvim/
 rm -f $HOME/.gnupg/gpg-agent.conf
 rm -f $HOME/.gnupg/gpg.conf
+rm -rf $HOME/.config/VencordDesktop/VencordDesktop/
 
 cp -r $GIT_DIR/fish/ $HOME/.config/
 cp $GIT_DIR/universal-shellrc.txt $HOME/.config/fish/conf.d/universal.fish
+
 cp -r $GIT_DIR/kitty/ $HOME/.config/
 cp -r $GIT_DIR/nvim/ $HOME/.config/
+
 mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
+
+mkdir -p $HOME/.config/VencordDesktop/VencordDesktop/
+cp -r $GIT_DIR/VencordDesktop/* $HOME/.config/VencordDesktop/VencordDesktop/
