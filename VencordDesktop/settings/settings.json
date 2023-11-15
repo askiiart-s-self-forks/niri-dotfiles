@@ -329,7 +329,7 @@
             "enabled": false
         },
         "Party mode 🎉": {
-            "enabled": true,
+            "enabled": false,
             "superIntensePartyMode": 0
         },
         "PermissionFreeWill": {
@@ -338,7 +338,9 @@
             "onboarding": true
         },
         "PermissionsViewer": {
-            "enabled": true
+            "enabled": true,
+            "permissionsSortOrder": 0,
+            "defaultPermissionsDropdownState": false
         },
         "petpet": {
             "enabled": true
@@ -546,6 +548,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1699903071324
+        "settingsSyncVersion": 1700063160358
     }
 }
