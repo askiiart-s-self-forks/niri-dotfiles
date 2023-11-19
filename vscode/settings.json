@@ -1,0 +1,72 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "git.autofetch": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true,
+        "python": true
+    },
+    "git.confirmSync": false,
+    "arduino.useArduinoCli": true,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "auto-build.defaultEnv.name": "STM32G0B1RE_btt",
+    "auto-build.build.silent": false,
+    "redhat.telemetry.enabled": false,
+    //"editor.rulers": [
+    //    120
+    //],
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "keyboard.dispatch": "keyCode",
+    "vim.disableExtension": true,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "files.exclude": {
+        "tmp.md": true
+    },
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "mohd-akram.vscode-html-format"
+    },
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "code-runner.runInTerminal": true,
+    "hexeditor.columnWidth": 32,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside",
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "raynigon.nginx-formatter"
+    },
+    "workbench.iconTheme": "catppuccin-mocha"
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock and suspend on lid closed
+Before=sleep.target
+
+[Service]
+User=%r
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock -ef -c 202f56
+ExecStartPost=/us/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target
