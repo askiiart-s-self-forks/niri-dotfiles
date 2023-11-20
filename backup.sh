@@ -25,6 +25,7 @@ cp $HOME/.gnupg/gpg-agent.conf $GIT_DIR/gnupg/
 rm -rf $GIT_DIR/VencordDesktop
 cp -r $HOME/.config/VencordDesktop/VencordDesktop/ $GIT_DIR
 
+# VS code
 rm -rf $GIT_DIR/vscode
 mkdir $GIT_DIR/vscode
 code --list-extensions >$GIT_DIR/vscode/extensions.txt

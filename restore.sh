@@ -5,8 +5,6 @@ GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 rm -rf $HOME/.config/fish/
 cp -r $GIT_DIR/fish/ $HOME/.config/
 cp $GIT_DIR/universal-shellrc.txt $HOME/.config/fish/conf.d/universal.fish
-sudo mkdir /usr/share/fonts/meslolgs
-sudo cp $GIT_DIR/other-files/*.ttf /usr/share/fonts/meslolgs/
 
 # kitty
 rm -rf $HOME/.config/kitty/
