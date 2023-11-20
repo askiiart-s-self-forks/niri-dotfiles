@@ -68,5 +68,7 @@
     "[nginx]": {
         "editor.defaultFormatter": "raynigon.nginx-formatter"
     },
-    "workbench.iconTheme": "catppuccin-mocha"
+    "workbench.iconTheme": "catppuccin-mocha",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "inlineChat.showDiff": false
 }
