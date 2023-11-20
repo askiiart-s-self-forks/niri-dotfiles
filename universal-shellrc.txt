@@ -6,8 +6,6 @@ alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
 alias ls="ls --color=auto -CF"
 alias ll="ls -l"
 alias la="ls -a"
-gpgconf --launch gpg-agent
-gpg-connect-agent updatestartuptty /bye
 
 alias icat="kitten icat"
 alias lock="i3lock -c 202f56"

@@ -30,7 +30,8 @@ GrapeCity.gc-excelviewer
 Gruntfuggly.todo-tree
 HarryHopkinson.vim-theme
 hoovercj.vscode-settings-cycler
-]ItzSelenux.lm-theme
+icrawl.discord-vscode
+ItzSelenux.lm-theme
 JoelCrosby.one-dark-darker
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme

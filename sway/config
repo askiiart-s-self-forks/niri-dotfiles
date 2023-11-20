@@ -26,13 +26,11 @@ for_window [window_role="task_dialog"] floating enable
 
 # shutdown / restart / suspend...
 set $lockwall "swaylock -c 202f56"
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id $lockwall, mode "default"
     bindsym e exec --no-startup-id swaymsg exit, mode "default"
-    bindsym s exec --no-startup-id $lockwall && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $lockwall && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Ctrl+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -55,12 +53,14 @@ bar {
         }
 }
 
+# background
+#exec --no-startup-id swaybg -i /home/askiiart/.config/sway/background.png
+
 ##### END Custom stuff #####
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# MODIFIED: path changed
 output * bg /home/askiiart/.config/sway/background.png fill
 #
 # Example configuration:
@@ -236,7 +236,7 @@ bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
-# MODIFIED: commented out
+#
 # Read `man 5 sway-bar` for more information about this section.
 #bar {
 #    position top
@@ -253,5 +253,4 @@ bindsym $mod+r mode "resize"
 #}
 
 include /etc/sway/config.d/*
-# MODIFIED: added include
 include /home/askiiart/.config/sway/config.d/*
