@@ -39,3 +39,9 @@ cp -r $HOME/.config/i3/ .
 # sway
 rm -rf $GIT_DIR/sway
 cp -r $HOME/.config/sway/ .
+
+# greetd (for sway)
+if [ -d /etc/greetd ]; then
+    rm $GIT_DIR/greetd/config.toml
+    cp /etc/greetd/config.toml $GIT_DIR/greetd/
+fi
