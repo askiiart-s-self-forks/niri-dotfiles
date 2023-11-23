@@ -35,6 +35,7 @@ ItzSelenux.lm-theme
 JoelCrosby.one-dark-darker
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
+lacroixdavid1.vscode-format-context-menu
 manuth.markdown-converter
 marlinfirmware.auto-build
 marvhen.reflow-markdown
