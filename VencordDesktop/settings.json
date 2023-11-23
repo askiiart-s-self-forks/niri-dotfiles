@@ -6,11 +6,11 @@
     "splashColor": "rgb(219, 222, 225)",
     "splashBackground": "rgb(0, 7, 32)",
     "windowBounds": {
-        "x": 960,
-        "y": 0,
-        "width": 960,
-        "height": 1136
+        "x": 2,
+        "y": 44,
+        "width": 1916,
+        "height": 1034
     },
-    "maximized": false,
+    "maximized": true,
     "minimized": false
 }
