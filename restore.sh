@@ -29,7 +29,8 @@ cp -r $GIT_DIR/VencordDesktop/* $HOME/.config/VencordDesktop/VencordDesktop/
 mkdir -p $HOME/.config/Code/User/
 cp $GIT_DIR/vscode/keybindings.json $HOME/.config/Code/User/
 cp $GIT_DIR/vscode/settings.json $HOME/.config/Code/User/
-#for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
+for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
+cp $GIT_DIR/vscode/argv.json $HOME/.vscode/argv.json
 
 # i3
 rm -rf $HOME/.config/i3

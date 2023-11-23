@@ -29,8 +29,9 @@ cp -r $HOME/.config/VencordDesktop/VencordDesktop/ $GIT_DIR
 rm -rf $GIT_DIR/vscode
 mkdir $GIT_DIR/vscode
 code --list-extensions >$GIT_DIR/vscode/extensions.txt
-cp $HOME/.config/Code/User/keybindings.json ./vscode/keybindings.json
-cp $HOME/.config/Code/User/settings.json ./vscode/settings.json
+cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
+cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
+cp $HOME/.vscode/argv.json $GIT_DIR/vscode/argv.json
 
 # i3
 rm -rf $GIT_DIR/i3
