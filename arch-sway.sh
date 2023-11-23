@@ -12,6 +12,8 @@ yay -S networkmanager-iwd networkmanager-dmenu-git --noconfirm --needed
 yay -S pipewire-pulse pavucontrol blueman bluetooth-support qpwgraph --noconfirm --needed
 yay -S brightnessctl --noconfirm --needed
 yay -S nemo gnome-calculator --noconfirm --needed
+yay -S i3status j4-dmenu-desktop --noconfirm --needed
+sudo systemctl enable --now NetworkManager
 
 # Install catppuccin grub theme
 git clone --depth=1 https://github.com/catppuccin/grub
@@ -20,6 +22,7 @@ rm -rf grub/
 sudo sed -i 's/#GRUB_THEME="\/path\/to\/gfxtheme"/GRUB_THEME=\/usr\/share\/grub\/themes\/catppuccin-mocha-grub-theme\/theme.txt/g' /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-yay -S greetd --noconfirm --needed
-sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
-sudo systemctl enable greetd.service
+# greetd, replaced by ly which should be preinstalled
+#yay -S greetd --noconfirm --needed
+#sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
+#sudo systemctl enable greetd.service

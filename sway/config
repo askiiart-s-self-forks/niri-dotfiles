@@ -18,14 +18,14 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu i3-dmenu-desktop | xargs swaymsg exec --
+set $menu j4-dmenu-desktop | xargs swaymsg exec --
 
 ##### Custom stuff #####
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # shutdown / restart / suspend...
-set $lockwall "swaylock -c 202f56"
+set $lockwall "swaylock -i ~/.config/sway/background.png"
 set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
 
 mode "$mode_system" {
