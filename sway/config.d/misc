@@ -1,0 +1,6 @@
+# Use clipman for the clipboard manager
+exec wl-paste -t text --watch clipman store --no-persist
+
+# Add screenshot and color picker
+bindsym Print exec grim
+bindsym Mod1+Print exec "slurp -p | xargs -I % grim -g % -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"

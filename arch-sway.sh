@@ -7,12 +7,13 @@ GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # gnome-keyring is for VS Code
 yay -S gnome-keyring --noconfirm --needed
-yay -S swaylock swaybg --noconfirm --needed
+yay -S i3status j4-dmenu-desktop swaylock swaybg clipman --noconfirm --needed
 yay -S iwgtk --noconfirm --needed
 yay -S pipewire-pulse pavucontrol blueman bluetooth-support qpwgraph --noconfirm --needed
 yay -S brightnessctl --noconfirm --needed
 yay -S nemo gnome-calculator --noconfirm --needed
-yay -S i3status j4-dmenu-desktop --noconfirm --needed
+# for screenshots and color picker
+yay -S slurp grim zenity imagemagick --noconfirm --needed
 
 # Install catppuccin grub theme
 git clone --depth=1 https://github.com/catppuccin/grub
