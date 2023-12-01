@@ -7,3 +7,7 @@ My dotfiles for:
 - kitty
 - nvim
 - gpg
+- Vencord Desktop (Vesktop)
+- i3
+- sway
+- VS Code
