@@ -7,9 +7,9 @@
     "splashBackground": "rgb(0, 7, 32)",
     "windowBounds": {
         "x": 2,
-        "y": 48,
+        "y": 44,
         "width": 956,
-        "height": 1030
+        "height": 1034
     },
     "maximized": true,
     "minimized": false

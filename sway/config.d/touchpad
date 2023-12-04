@@ -1,0 +1,4 @@
+input * {
+    tap enabled
+    #natural_scroll enabled
+}
