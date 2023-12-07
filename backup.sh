@@ -46,3 +46,6 @@ if [ -d /etc/greetd ]; then
     rm $GIT_DIR/greetd/config.toml
     cp /etc/greetd/config.toml $GIT_DIR/greetd/
 fi
+
+# xinitrc
+cp $HOME/.xinitrc $GIT_DIR/other-files/.xinitrc

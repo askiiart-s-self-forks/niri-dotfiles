@@ -47,3 +47,6 @@ if [ -d /etc/greetd ]; then
 fi
 
 echo "restore.sh done!"
+
+# xinitrc
+cp $GIT_DIR/other-files/.xinitrc $HOME/.xinitrc
