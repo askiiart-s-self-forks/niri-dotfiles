@@ -19,7 +19,7 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 echo "Log out, change to sway, then log back in"
 
 # greetd
-sudo dnf install tuigreet -y
-sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
-sudo systemctl disable lightdm.service
-sudo systemctl enable greetd.service
+#sudo dnf install tuigreet -y
+#sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
+#sudo systemctl disable lightdm.service
+#sudo systemctl enable greetd.service
