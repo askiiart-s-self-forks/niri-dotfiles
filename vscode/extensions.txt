@@ -23,7 +23,6 @@ foxundermoon.shell-format
 freebroccolo.theme-atom-one-dark
 GitHub.copilot
 GitHub.copilot-chat
-GitHub.copilot-labs
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 GrapeCity.gc-excelviewer
