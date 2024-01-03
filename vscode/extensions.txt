@@ -6,6 +6,7 @@ andresma.night-nord
 aytee17.vscode-oceanic-next-sublime
 azemoh.one-monokai
 BeardedBear.beardedtheme
+bmalehorn.vscode-fish
 Catppuccin.catppuccin-vsc
 Catppuccin.catppuccin-vsc-icons
 codezombiech.gitignore
