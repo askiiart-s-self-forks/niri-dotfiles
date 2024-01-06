@@ -13,6 +13,7 @@ codezombiech.gitignore
 ctenbrinke.vscode-tsv
 danielpinto8zz6.c-cpp-compile-run
 DavidAnson.vscode-markdownlint
+dbaeumer.vscode-eslint
 DiegoMolina.css-minify
 dustypomerleau.rust-syntax
 equinusocio.vsc-material-theme-icons
