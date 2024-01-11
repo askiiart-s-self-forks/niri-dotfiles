@@ -4,17 +4,3 @@ exec wl-paste -t text --watch clipman store --no-persist
 # Add screenshot and color picker
 bindsym Print exec grim
 bindsym Mod1+Print exec "slurp -p | xargs -I % grim -g % -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
-
-# fix librewolf notifications with SwayNotificationCenter
-exec "swaync"
-
-# add audio and brightness button support
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-
-exec "blueman-applet"
-exec "dockerd-rootless"

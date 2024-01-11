@@ -6,14 +6,12 @@ andresma.night-nord
 aytee17.vscode-oceanic-next-sublime
 azemoh.one-monokai
 BeardedBear.beardedtheme
-bmalehorn.vscode-fish
 Catppuccin.catppuccin-vsc
 Catppuccin.catppuccin-vsc-icons
 codezombiech.gitignore
 ctenbrinke.vscode-tsv
 danielpinto8zz6.c-cpp-compile-run
 DavidAnson.vscode-markdownlint
-dbaeumer.vscode-eslint
 DiegoMolina.css-minify
 dustypomerleau.rust-syntax
 equinusocio.vsc-material-theme-icons
