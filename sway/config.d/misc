@@ -17,19 +17,22 @@ for_window [app_id = "floating_update"] floating enable, resize set width 1000px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
 
-# firefox floating windows
-for_window [title = "About Mozilla Firefox"] floating enable
+# librewolf floating windows
+for_window [title = "About LibreWolf"] floating enable
 for_window [window_role = "About"] floating enable
-for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
+for_window [app_id="LibreWolf" title="Library"] floating enable, border pixel 1, sticky enable, resize set 800 500
 
 # steam floating windows
-for_window [class="^Steam$" title="^Friends$"] floating enable
-for_window [class="^Steam$" title="Steam - News"] floating enable
-for_window [class="^Steam$" title=".* - Chat"] floating enable
-for_window [class="^Steam$" title="^Settings$"] floating enable
-for_window [class="^Steam$" title=".* - event started"] floating enable
-for_window [class="^Steam$" title=".* CD key"] floating enable
-for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
-for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
-for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [class="steam" title="Friends List"] floating enable, resize set 300 600
+for_window [class="steam" title="Steam - News"] floating enable
+for_window [class="steam" title=".* - Chat"] floating enable
+for_window [class="steam" title="^Settings$"] floating enable
+for_window [class="steam" title=".* - event started"] floating enable
+for_window [class="steam" title=".* CD key"] floating enable
+for_window [class="steam" title="^Steam - Self Updater$"] floating enable
+for_window [class="steam" title="^Screenshot Uploader$"] floating enable
+for_window [class="steam" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
+
+# make Minecraft float
+for_window [class="Minecraft.*"] floating enable
