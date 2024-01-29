@@ -36,3 +36,13 @@ for_window [title="^Steam Keyboard$"] floating enable
 
 # make Minecraft float
 for_window [class="Minecraft.*"] floating enable
+
+# other execs
+exec --no-startup-id swaync
+
+# polkit
+exec --no-startup-id lxqt-policykit-agent
+for_window [title="Authentication Required" app_id="lxqt-policykit-agent"] floating enable, resize set 350 200
+
+# lock when Scroll_Lock is pressed
+bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"

@@ -42,6 +42,7 @@ matthewpi.caddyfile-support
 maximtrp.drone-ci
 mechatroner.rainbow-csv
 mhutchie.git-graph
+michelemelluso.gitignore
 mohd-akram.vscode-html-format
 ms-azuretools.vscode-docker
 ms-python.autopep8
