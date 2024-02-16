@@ -28,3 +28,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 #yay -S greetd --noconfirm --needed
 #sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
 #sudo systemctl enable greetd.service
+
+# make GUI stuff work when running as root (e.g. gparted)
+yay -S xorg-xhost --noconfirm --needed
+xhost +SI:localuser:root
