@@ -5,6 +5,7 @@ GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 rm -rf $HOME/.config/fish/
 cp -r $GIT_DIR/fish/ $HOME/.config/
 cp $GIT_DIR/universal-shellrc.txt $HOME/.config/fish/conf.d/universal.fish
+fish -c 'fisher update'
 
 # kitty
 rm -rf $HOME/.config/kitty/
