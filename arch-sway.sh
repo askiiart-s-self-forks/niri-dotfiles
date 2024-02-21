@@ -32,3 +32,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # make GUI stuff work when running as root (e.g. gparted)
 yay -S xorg-xhost --noconfirm --needed
 xhost +SI:localuser:root
+
+# Enable MultiProfile for bluetooth (enables more than just headset-quality support on thing that support many audio profiles)
+sudo sed -i 's/#MultiProfile = off/MultiProfile = multiple/g' /etc/bluetooth/main.conf
+sudo systemctl restart bluetooth.service

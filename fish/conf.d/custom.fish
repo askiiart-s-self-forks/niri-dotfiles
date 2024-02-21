@@ -6,4 +6,7 @@ if status is-interactive
     set -x DOCKER_HOST unix://$XDG_RUNTIME_DIR/docker.sock
     gpgconf --launch gpg-agent
     gpg-connect-agent updatestartuptty /bye
+    # ctrl+backspace (^H in kitty)
+    # for ctrl+delete: kill-word (unsure about its code in kitty)
+    bind \cH backward-kill-path-component
 end
