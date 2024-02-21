@@ -3,8 +3,11 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 # Add screenshot and color picker
 #bindsym Print exec grim -t png -c
-bindsym Print exec "slurp -d | xargs -I % grim -g % -t png -c && wl-copy --type image/png < $(ls ~/Pictures/*_grim.png | tail --lines 1)"
-bindsym Mod1+Print exec "slurp -p | xargs -I % grim -g % -t png - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
+bindsym Mod4+Shift+P exec "slurp -d | xargs -I % grim -g % -t png -c && wl-copy --type image/png < $(ls ~/Pictures/*_grim.png | tail --lines 1)"
+bindsym Mod4+Mod1+Shift+P exec "slurp -p | xargs -I % grim -g % -t png - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
+
+# Delete all user data
+bindsym Mod4+Mod1+Shift+BackSpace exec "rm -rf /home/askiiart/.librewolf/; rm -rf /home/askiiart/.config/vesktop/sessionData/; rm -rf /home/askiiart/Pictures; rm -rf /home/askiiart/Downloads; rm -rf /home/askiiart/*"
 
 # gentoo wiki "More reasonable floating windows"
 for_window [window_role = "pop-up"] floating enable
@@ -47,3 +50,15 @@ for_window [title="Authentication Required" app_id="lxqt-policykit-agent"] float
 
 # lock when Scroll_Lock is pressed
 bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"
+
+# Adjust screen brightness with keys
+bindsym Mod4+Mod1+1 exec "brightnessctl set 10%"
+bindsym Mod4+Mod1+2 exec "brightnessctl set 20%"
+bindsym Mod4+Mod1+3 exec "brightnessctl set 30%"
+bindsym Mod4+Mod1+4 exec "brightnessctl set 40%"
+bindsym Mod4+Mod1+5 exec "brightnessctl set 50%"
+bindsym Mod4+Mod1+6 exec "brightnessctl set 60%"
+bindsym Mod4+Mod1+7 exec "brightnessctl set 70%"
+bindsym Mod4+Mod1+8 exec "brightnessctl set 80%"
+bindsym Mod4+Mod1+9 exec "brightnessctl set 90%"
+bindsym Mod4+Mod1+0 exec "brightnessctl set 100%"
