@@ -1,5 +1,6 @@
 if status is-interactive
     fish_add_path .cargo/bin/
+    fish_add_path /opt/clang-format-static
     set -x GPG_TTY (tty)
     set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
     set -x EDITOR nvim

@@ -47,5 +47,11 @@ if [ -d /etc/greetd ]; then
     cp /etc/greetd/config.toml $GIT_DIR/greetd/
 fi
 
+# Claws Mail configs
+rm -rf $GIT_DIR/claws-mail
+mkdir $GIT_DIR/claws-mail
+cp $HOME/.claws-mail/clawsrc $GIT_DIR/claws-mail/clawsrc
+cp $HOME/.claws-mail/matcherrc $GIT_DIR/claws-mail/matcherrc
+
 # xinitrc
 cp $HOME/.xinitrc $GIT_DIR/other-files/.xinitrc

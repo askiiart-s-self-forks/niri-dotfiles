@@ -8,6 +8,7 @@ azemoh.one-monokai
 beardedbear.beardedtheme
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
+ciiqr.reindent
 codezombiech.gitignore
 ctenbrinke.vscode-tsv
 danielpinto8zz6.c-cpp-compile-run
@@ -15,6 +16,7 @@ davidanson.vscode-markdownlint
 diegomolina.css-minify
 dustypomerleau.rust-syntax
 equinusocio.vsc-material-theme-icons
+esbenp.prettier-vscode
 eserozvataf.one-dark-pro-monokai-darker
 felipecaputo.git-project-manager
 fisheva.eva-theme
@@ -42,7 +44,6 @@ matthewpi.caddyfile-support
 maximtrp.drone-ci
 mechatroner.rainbow-csv
 mhutchie.git-graph
-michelemelluso.gitignore
 mohd-akram.vscode-html-format
 ms-azuretools.vscode-docker
 ms-mssql.data-workspace-vscode
@@ -50,7 +51,6 @@ ms-mssql.mssql
 ms-mssql.sql-bindings-vscode
 ms-mssql.sql-database-projects-vscode
 ms-python.autopep8
-ms-python.black-formatter
 ms-python.debugpy
 ms-python.isort
 ms-python.python
@@ -82,6 +82,7 @@ novy.vsc-gcode
 phplasma.csv-to-table
 pilleye.dusk-theme
 platformio.platformio-ide
+procratstinator.gray-formatter
 raynigon.nginx-formatter
 rdnlsmith.linux-themes
 redhat.java
@@ -113,6 +114,7 @@ vscjava.vscode-java-test
 vscjava.vscode-maven
 vscodevim.vim
 wayou.vscode-todo-highlight
+xaver.clang-format
 yzhang.markdown-all-in-one
 zamerick.vscode-caddyfile-syntax
 zhuangtongfa.material-theme

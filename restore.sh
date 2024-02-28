@@ -40,10 +40,12 @@ if [ -d /etc/greetd ]; then
     sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
 fi
 
-echo "restore.sh done!"
-
 # xinitrc
 cp $GIT_DIR/other-files/.xinitrc $HOME/.xinitrc
+
+# Claws Mail configs
+cp $GIT_DIR/claws-mail/clawsrc $HOME/.claws-mail/clawsrc
+cp $GIT_DIR/claws-mail/matcherrc $HOME/.claws-mail/matcherrc
 
 # VS code
 mkdir -p $HOME/.config/Code/User/
@@ -51,3 +53,5 @@ cp $GIT_DIR/vscode/keybindings.json $HOME/.config/Code/User/
 cp $GIT_DIR/vscode/settings.json $HOME/.config/Code/User/
 for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
 cp $GIT_DIR/vscode/argv.json $HOME/.vscode/argv.json
+
+echo "restore.sh done!"
