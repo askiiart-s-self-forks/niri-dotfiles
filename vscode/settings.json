@@ -13,7 +13,7 @@
     "arduino.useArduinoCli": true,
     "[python]": {
         "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.autopep8"
+        "editor.defaultFormatter": "Procratstinator.gray-formatter"
     },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
@@ -70,5 +70,29 @@
     },
     "workbench.iconTheme": "catppuccin-mocha",
     "terminal.integrated.shellIntegration.enabled": false,
-    "inlineChat.showDiff": false
+    "inlineChat.showDiff": false,
+    "mssql.connections": [
+        {
+            "server": "localhost",
+            "database": "WideWorldImporters",
+            "authenticationType": "SqlLogin",
+            "user": "ben",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": true,
+            "profileName": "vm wwi",
+            "encrypt": "Mandatory",
+            "trustServerCertificate": true,
+            "connectTimeout": 15,
+            "commandTimeout": 30,
+            "applicationName": "vscode-mssql"
+        }
+    ],
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "clang-format.executable": "/opt/clang-format-static/clang-format-17",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
