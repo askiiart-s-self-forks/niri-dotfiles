@@ -9,3 +9,7 @@ alias la="ls -a"
 
 alias icat="kitten icat"
 alias lock="i3lock -c 202f56"
+
+alias noss="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
+alias nosb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
+alias nos-rollback="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild --rollback"

@@ -94,5 +94,10 @@
     "clang-format.executable": "/opt/clang-format-static/clang-format-17",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true
 }

@@ -9,7 +9,6 @@ mv $GIT_DIR/fish/conf.d/universal.fish $GIT_DIR/universal-shellrc.txt
 rm -rf $GIT_DIR/kitty
 cp -r $HOME/.config/kitty/ $GIT_DIR
 cp -r $HOME/.config/nvim/ $GIT_DIR
-cp -r $HOME/.config/VencordDesktop/VencordDesktop/ $GIT_DIR
 
 # nvim
 rm -rf $GIT_DIR/nvim
@@ -22,8 +21,11 @@ cp $HOME/.gnupg/gpg.conf $GIT_DIR/gnupg/
 cp $HOME/.gnupg/gpg-agent.conf $GIT_DIR/gnupg/
 
 # Vesktop
-rm -rf $GIT_DIR/VencordDesktop
-cp -r $HOME/.config/VencordDesktop/VencordDesktop/ $GIT_DIR
+rm -rf $GIT_DIR/vesktop
+cp -r $HOME/.config/vesktop/ $GIT_DIR
+rm -rf $GIT_DIR/vesktop/sessionData
+rm -rf $GIT_DIR/vesktop/Crashpad
+rm -f $GIT_DIR/vesktop/Singleton*
 
 # VS code
 rm -rf $GIT_DIR/vscode

@@ -50,7 +50,7 @@ warn_large_insert=1
 warn_large_insert_size=500
 enable_aspell=1
 dictionary=en_US
-alt_dictionary=
+alt_dictionary=en
 use_alternate_dict=0
 check_while_typing=1
 recheck_when_changing_dict=1
@@ -165,7 +165,7 @@ summary_col_size_tags=150
 folderwin_x=16
 folderwin_y=16
 folderview_width=284
-folderview_height=900
+folderview_height=896
 folderview_visible=1
 folder_col_show_folder=1
 folder_col_show_new=1
@@ -185,30 +185,30 @@ folder_default_hide_read_threads=0
 folder_default_hide_read_msgs=0
 folder_default_hide_del_msgs=0
 summaryview_width=1627
-summaryview_height=470
+summaryview_height=468
 main_messagewin_x=256
 main_messagewin_y=210
 messageview_width=1627
-messageview_height=429
+messageview_height=427
 messageview_visible=1
 mainview_x=0
 mainview_y=0
 mainview_width=1627
-mainview_height=1032
+mainview_height=1028
 mainwin_x=0
 mainwin_y=0
 mainwin_maximised=0
 mainwin_fullscreen=0
 mainwin_menubar=1
 mainwin_width=1916
-mainwin_height=1032
-messagewin_width=600
-messagewin_height=540
+mainwin_height=1028
+messagewin_width=636
+messagewin_height=1028
 mimeview_tree_height=60
 sourcewin_width=956
 sourcewin_height=1032
 compose_width=956
-compose_height=1032
+compose_height=1028
 compose_notebook_height=166
 compose_x=0
 compose_y=0
@@ -253,7 +253,7 @@ attach_desc=1
 attach_save_directory=
 attach_load_directory=/home/askiiart/
 mime_textviewer=
-mime_open_command=librewolf %s
+mime_open_command=firefox '%s'
 show_inline_attachments=1
 layout_mode=0
 open_selected_message_on_folder_open=0
@@ -292,9 +292,9 @@ apply_per_account_filtering_rules=0
 addressbook_use_editaddress_dialog=1
 addressbook_hpaned_pos=-1
 addressbook_vpaned_pos=-1
-uri_open_command=firefox '%s'
+uri_open_command=librewolf '%s'
 ext_editor_command=gedit '%s'
-cmds_use_system_default=1
+cmds_use_system_default=0
 add_address_by_click=0
 session_passwords=0
 confirm_on_exit=0
@@ -470,10 +470,10 @@ gpg_path=
 [Plugins_Common]
 
 [Plugins_GTK3]
-/usr/lib/claws-mail/plugins/pgpcore.so
-/usr/lib/claws-mail/plugins/pgpmime.so
-/usr/lib/claws-mail/plugins/spamassassin.so
-/usr/lib/claws-mail/plugins/rssyl.so
+pgpcore.so
+pgpmime.so
+spamassassin.so
+rssyl.so
 
 [SpamAssassin]
 enable=1
@@ -484,7 +484,7 @@ socket=
 process_emails=1
 receive_spam=1
 save_folder=#mh/Mailbox/Spam
-max_size=250
+max_size=5000
 timeout=30
 username=askiiart
 mark_as_read=1

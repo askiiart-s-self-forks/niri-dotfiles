@@ -42,7 +42,8 @@ for_window [title="^Steam Keyboard$"] floating enable
 for_window [class="Minecraft.*"] floating enable
 
 # other execs
-exec --no-startup-id swaync
+exec /home/askiiart/.config/sway/dbus-sway-environment.sh
+exec swaync
 
 # polkit
 exec --no-startup-id lxqt-policykit-agent

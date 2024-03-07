@@ -124,9 +124,6 @@
         "Dearrow": {
             "enabled": false
         },
-        "DisableDMCallIdle": {
-            "enabled": true
-        },
         "EmoteCloner": {
             "enabled": false
         },
@@ -536,6 +533,33 @@
         },
         "SuperReactionTweaks": {
             "enabled": false
+        },
+        "DisableCallIdle": {
+            "enabled": true
+        },
+        "ChatInputButtonAPI": {
+            "enabled": true
+        },
+        "BetterGifPicker": {
+            "enabled": false
+        },
+        "ClientTheme": {
+            "enabled": false
+        },
+        "Decor": {
+            "enabled": false
+        },
+        "FixCodeblockGap": {
+            "enabled": false
+        },
+        "FixYoutubeEmbeds": {
+            "enabled": false
+        },
+        "NotificationVolume": {
+            "enabled": false
+        },
+        "ReviewDB": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -548,6 +572,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1700063160358
+        "settingsSyncVersion": 1709751296550
     }
 }
