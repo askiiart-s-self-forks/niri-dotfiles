@@ -22,10 +22,8 @@ mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
 
 # vesktop
-rm -rf $HOME/.config/vesktop/
-mkdir -p $HOME/.config/vesktop/
-cp -r $GIT_DIR/vesktop/* $HOME/.config/vesktop/
-
+mkdir $HOME/vesktop
+cp -r $GIT_DIR/vesktop/* $HOME/vesktop/
 # i3
 rm -rf $HOME/.config/i3
 cp -r $GIT_DIR/i3 $HOME/.config/
