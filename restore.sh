@@ -49,7 +49,6 @@ cp $GIT_DIR/claws-mail/matcherrc $HOME/.claws-mail/matcherrc
 
 # rofi
 rm -rf $HOME/.config/rofi/
-mkdir $HOME/.config/rofi/
 cp -r $GIT_DIR/rofi $HOME/.config/rofi/
 
 # VS code
