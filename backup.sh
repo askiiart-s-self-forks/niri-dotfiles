@@ -57,3 +57,7 @@ cp $HOME/.claws-mail/matcherrc $GIT_DIR/claws-mail/matcherrc
 
 # xinitrc
 cp $HOME/.xinitrc $GIT_DIR/other-files/.xinitrc
+
+# rofi
+rm -rf $GIT_DIR/rofi/
+cp -r $HOME/.config/rofi/ $GIT_DIR/rofi/

@@ -47,6 +47,11 @@ cp $GIT_DIR/other-files/.xinitrc $HOME/.xinitrc
 cp $GIT_DIR/claws-mail/clawsrc $HOME/.claws-mail/clawsrc
 cp $GIT_DIR/claws-mail/matcherrc $HOME/.claws-mail/matcherrc
 
+# rofi
+rm -rf $HOME/.config/rofi/
+mkdir $HOME/.config/rofi/
+cp -r $GIT_DIR/rofi $HOME/.config/rofi/
+
 # VS code
 mkdir -p $HOME/.config/Code/User/
 mkdir -p $HOME/.vscode/
