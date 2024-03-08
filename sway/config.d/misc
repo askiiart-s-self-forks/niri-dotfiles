@@ -3,7 +3,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 # Add screenshot and color picker
 #bindsym Print exec grim -t png -c
-bindsym Mod4+Shift+P exec "slurp -d | xargs -I % grim -g % -t png -c && wl-copy --type image/png < $(ls ~/Pictures/*_grim.png | tail --lines 1)"
+bindsym Mod4+Shift+P exec "mkdir $HOME/Pictures; export FILENAME=$HOME/Pictures/screenshot_$(date +%F_%H:%M:%S).png; slurp -d | xargs -I % grim -g % -t png -c $FILENAME; wl-copy --type image/png < $FILENAME"
 bindsym Mod4+Mod1+Shift+P exec "slurp -p | xargs -I % grim -g % -t png - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
 
 # Delete all user data
