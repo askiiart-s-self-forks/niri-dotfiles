@@ -163,7 +163,8 @@
             "enabled": true
         },
         "GameActivityToggle": {
-            "enabled": true
+            "enabled": true,
+            "oldIcon": false
         },
         "GifPaste": {
             "enabled": true
@@ -560,6 +561,9 @@
         },
         "ReviewDB": {
             "enabled": false
+        },
+        "XSOverlay": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -572,6 +576,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1709751296550
+        "settingsSyncVersion": 1709943427384
     }
 }

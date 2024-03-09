@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # fish
@@ -22,8 +23,8 @@ mkdir $HOME/.gnupg
 cp -r $GIT_DIR/gnupg/* $HOME/.gnupg/
 
 # vesktop
-mkdir $HOME/vesktop
-cp -r $GIT_DIR/vesktop/* $HOME/vesktop/
+mkdir $HOME/.config/vesktop
+cp -r $GIT_DIR/vesktop/* $HOME/.config/vesktop/
 
 # i3
 rm -rf $HOME/.config/i3
@@ -43,6 +44,7 @@ fi
 cp $GIT_DIR/other-files/.xinitrc $HOME/.xinitrc
 
 # Claws Mail configs
+mkdir $HOME/.claws-mail/
 cp $GIT_DIR/claws-mail/clawsrc $HOME/.claws-mail/clawsrc
 cp $GIT_DIR/claws-mail/matcherrc $HOME/.claws-mail/matcherrc
 
