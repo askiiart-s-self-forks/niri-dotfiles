@@ -48,6 +48,6 @@ enabled rulename "Move more YouTube comments to low-priority" subject matchcase 
 enabled rulename "Move Windscribe to spam and mark as read" from matchcase "noreply@windscribe.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move GeeksforGeeks to spam and mark as read" from matchcase "no-reply@geeksforgeeks.org" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move Tallo to spam and mark as read" from regexp ".*@tallo.com" mark_as_read move "#mh/Mailbox/Spam"
-disabled rulename "Run gpg-email-helper" test "grep -- \"-----BEGIN PGP SIGNATURE-----\" %F" execute "python3 /home/askiiart/gpg-email-helper/gpg-email-helper.py %F"
+enabled rulename "Run gpg-email-helper" test "grep -- \"-----BEGIN PGP SIGNATURE-----\" %F" execute "python3 /home/askiiart/gpg-email-helper/gpg-email-helper.py %F"
 enabled rulename "Move Microsoft sign-ins to low-priority" from matchcase "account-security-noreply@accountprotection.microsoft.com" & subject matchcase "New sign-in detected" move "#mh/Mailbox/Low-priority"
 
