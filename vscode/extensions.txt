@@ -96,7 +96,6 @@ rokoroku.vscode-theme-darcula
 rust-lang.rust-analyzer
 SanaAjani.taskrunnercode
 serayuzgur.crates
-SeyyedKhandon.firacode
 ShahilKumar.docxreader
 slevesque.vscode-zipexplorer
 St0pien.min-darker
