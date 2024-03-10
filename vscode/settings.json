@@ -97,7 +97,5 @@
     },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
-    },
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true
+    }
 }
