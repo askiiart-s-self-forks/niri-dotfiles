@@ -2,7 +2,7 @@
 exec wl-paste -t text --watch clipman store --no-persist
 
 # Add screenshot and color picker
-#bindsym Print exec grim -t png -c
+bindsym Print exec grim -t png -c
 bindsym Mod4+Shift+P exec "mkdir $HOME/Pictures; export FILENAME=$HOME/Pictures/screenshot_$(date +%F_%H:%M:%S).png; slurp -d | xargs -I % grim -g % -t png -c $FILENAME; wl-copy --type image/png < $FILENAME"
 bindsym Mod4+Mod1+Shift+P exec "slurp -p | xargs -I % grim -g % -t png - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
 
@@ -63,3 +63,8 @@ bindsym Mod4+Mod1+7 exec "brightnessctl set 70%"
 bindsym Mod4+Mod1+8 exec "brightnessctl set 80%"
 bindsym Mod4+Mod1+9 exec "brightnessctl set 90%"
 bindsym Mod4+Mod1+0 exec "brightnessctl set 100%"
+
+# keys for media, volume, etc.
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%

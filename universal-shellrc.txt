@@ -15,5 +15,3 @@ alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all -
 alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
 alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
 alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
-alias hms-rb="NIXPKGS_ALLOW_INSECURE=1 home-manager switch --rollback"
-alias hmb-rb="NIXPKGS_ALLOW_INSECURE=1 home-manager build --rollback"

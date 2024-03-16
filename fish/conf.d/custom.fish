@@ -10,6 +10,7 @@ if status is-interactive
     # ctrl+backspace (^H in kitty)
     # for ctrl+delete: kill-word (unsure about its code in kitty)
     bind \cH backward-kill-path-component
+    bind '[3;5~' kill-word
     set -x NIXPKGS_ALLOW_UNFREE 1
     set -x NIXPKGS_ALLOW_INSECURE 1
 end
