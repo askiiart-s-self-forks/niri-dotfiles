@@ -23,5 +23,25 @@ alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --
 alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
 alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
 
+
+
 # git
 alias git-us="git submodule update --init --recursive"
+
+# switch between SSH and HTTPS remotes
+alias git-remote-switch="python3 -c \"import subprocess
+
+remote = subprocess.getoutput('git branch -vv')
+remote = remote[remote.find('[') + 1 : remote.find('/')]
+old_url = subprocess.getoutput(f'git remote get-url {remote}')
+
+if old_url.startswith('https://'):
+    new_url = old_url[8:]
+    new_url = new_url[: new_url.find('/')] + ':' + new_url[new_url.find('/') + 1 :]
+    new_url = f'git@{new_url}'
+else:
+    new_url = old_url[4:]
+    new_url = new_url.replace(':', '/')
+    new_url = f'https://{new_url}'
+
+exit(subprocess.getstatusoutput(f'git remote set-url {remote} {new_url}')[0])\""
