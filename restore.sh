@@ -65,7 +65,7 @@ cp -r $GIT_DIR/rofi $HOME/.config/rofi/
 # TODO: Add automatic catppuccin GTK updates - would be easy, but no version numbering once install, need to figure that out
 ctp_version="v0.7.1"
 variant="Catppuccin-Mocha-Standard-Mauve-Dark"
-if [ ! -e ~/.themes/$variant ] && [ ! command_exists "nixos-rebuild" ]; then
+if [ ! -e ~/.themes/$variant ] && ! command_exists "nixos-rebuild"; then
     mkdir -p ~/.themes &&
         curl -L https://github.com/catppuccin/gtk/releases/download/$ctp_version/$variant.zip -o ~/.themes/catppuccin.zip &&
         unzip ~/.themes/catppuccin.zip -d ~/.themes/ &&
