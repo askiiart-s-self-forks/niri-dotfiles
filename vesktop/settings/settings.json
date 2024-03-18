@@ -267,9 +267,6 @@
             "ignoreBots": true,
             "ignoreBlocked": true
         },
-        "MuteNewGuild": {
-            "enabled": false
-        },
         "MutualGroupDMs": {
             "enabled": false
         },
@@ -563,6 +560,9 @@
             "enabled": false
         },
         "XSOverlay": {
+            "enabled": false
+        },
+        "NewGuildSettings": {
             "enabled": false
         }
     },

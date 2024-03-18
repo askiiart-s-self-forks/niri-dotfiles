@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
+command_exists() { type "$1" &>/dev/null; }
+
+# fish
 rm -rf $GIT_DIR/fish
 cp -r $HOME/.config/fish/ $GIT_DIR
+if command_exists "nixos-rebuild"; then
+    rm $GIT_DIR/fish/config.fish
+    mv $GIT_DIR/fish/config.fish.backup $GIT_DIR/fish/config.fish
+fi
 mv $GIT_DIR/fish/conf.d/universal.fish $GIT_DIR/universal-shellrc.txt
 
 # kitty

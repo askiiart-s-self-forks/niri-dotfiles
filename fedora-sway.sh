@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # assumes a Fedora Sway base with askiiart/configs/do-everything.bash already run
-# TODO: Add schildichat-desktop to askiiart.net repo, add GTK themes and fix-gamepad.service from askiiart/nix
+# TODO: Add schildichat-desktop to askiiart.net repo, add fix-gamepad.service from askiiart/nix
 if [ $(whoami) == "root" ]; then
     echo "Run as a normal user, not root"
     exit 1

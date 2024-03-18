@@ -1,17 +1,27 @@
-# Stuff to go in the init script for every shell (.bashrc, .zshrc, .config/fish/config.fish, etc.)
-#alias docker="podman"
+# Stuff be used in init for any shell
+
+# docker/podman stuff
 #alias docker="sudo docker"
+alias docker="podman"
+alias dcompose="docker compose up -d --remove-orphans"
+alias ddu="docker compose down && dcompose"
 alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
 
 alias ls="ls --color=auto -CF"
 alias ll="ls -l"
 alias la="ls -a"
 
+# kitty stuff
 alias icat="kitten icat"
+alias s="kitten ssh"
 
+# NixOS
 alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
 alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
 alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all --rollback"
 alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
 alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
 alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
+
+# git
+alias git-us="git submodule update --init --recursive"
