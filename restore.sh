@@ -75,6 +75,8 @@ if [ ! -e ~/.themes/$variant ] && ! command_exists "nixos-rebuild"; then
     rm -rf $HOME/.config/gtk-4.0
     ln -sf "${HOME}/.themes/${variant}/gtk-4.0/" "${HOME}/.config/gtk-4.0"
     export GTK_THEME="Catppuccin-Mocha-Standard-Mauve-Dark:dark"
+    mkdir ~/.config/gtk-3.0
+    echo -e "[Settings]\n${variant}" > ~/.config/gtk-3.0/settings.ini
 fi
 
 # VS code
