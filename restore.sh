@@ -79,6 +79,12 @@ if [ ! -e ~/.themes/$variant ] && ! command_exists "nixos-rebuild"; then
     echo -e "[Settings]\n${variant}" > ~/.config/gtk-3.0/settings.ini
 fi
 
+# fix-gamepad.service
+if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
+    sudo cp $GIT_DIR/systemd/fix-gamepad.service /etc/systemd/system/
+    sudo systemctl enable --now fix-gamepad.service
+fi
+
 # VS code
 mkdir -p $HOME/.config/Code/User/
 mkdir -p $HOME/.vscode/

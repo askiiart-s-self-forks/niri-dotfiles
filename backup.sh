@@ -65,6 +65,11 @@ cp $HOME/.claws-mail/matcherrc $GIT_DIR/claws-mail/matcherrc
 # xinitrc
 cp $HOME/.xinitrc $GIT_DIR/other-files/.xinitrc
 
+# fix-gamepad.service
+if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
+    cp /etc/systemd/system/fix-gamepad.service $GIT_DIR/systemd/fix-gamepad.service
+fi
+
 # rofi
 rm -rf $GIT_DIR/rofi/
 cp -r $HOME/.config/rofi/ $GIT_DIR/rofi/

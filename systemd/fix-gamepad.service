@@ -1,0 +1,9 @@
+[Unit]
+Description=Fix the gamepad by adding an offset to the right stick
+Type=simple
+
+[Service]
+ExecStart=/usr/bin/env bash -c 'while true; do /usr/bin/env evdev-joystick --e /dev/input/by-id/usb-ShanWan_Xbox360_For_Windows_10F36D6-event-joystick --minimum -32767 --maximum 0 --a 3; /usr/bin/env evdev-joystick --e /dev/input/by-id/usb-ShanWan_Xbox360_For_Windows_10F36D6-event-joystick --minimum 0 --maximum 32767 --a 4; sleep 5; done'
+
+[Install]
+WantedBy=multi-user.target

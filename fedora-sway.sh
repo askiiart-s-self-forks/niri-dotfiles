@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # assumes a Fedora Sway base with askiiart/configs/do-everything.bash already run
-# TODO: Add fix-gamepad.service from askiiart/nix
 if [ $(whoami) == "root" ]; then
     echo "Run as a normal user, not root"
     exit 1
