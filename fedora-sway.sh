@@ -6,7 +6,7 @@ if [ $(whoami) == "root" ]; then
 fi
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-sudo dnf install i3status clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi -y
+sudo dnf install i3status clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi wireguard-tools -y
 # also has waybar, which is unused, but maybe i'll use it idk
 sudo dnf remove Thunar imw unst foot mpv
 
