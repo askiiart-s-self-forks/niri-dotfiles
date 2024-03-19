@@ -41,8 +41,11 @@ for_window [title="^Steam Keyboard$"] floating enable
 # make Minecraft float
 for_window [class="Minecraft.*"] floating enable
 
+# make claws mail TLS thing float
+for_window [app_id="claws-mail" title="TLS certificate is unknown"] floating enable, resize set 600 400
+
 # other execs
-exec /home/askiiart/.config/sway/dbus-sway-environment.sh
+#exec /home/askiiart/.config/sway/dbus-sway-environment.sh
 exec swaync
 
 # polkit
@@ -55,6 +58,8 @@ bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"
 # Adjust screen brightness with keys
 bindsym Mod4+Mod1+Up exec "light -A 10%"
 bindsym Mod4+Mod1+Down exec "light -U 10%"
+bindsym Mod4+Mod1+Shift+Up exec "light -A 1%"
+bindsym Mod4+Mod1+Shift+Down exec "light -U 1%"
 
 # Adjust volume with keys
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
