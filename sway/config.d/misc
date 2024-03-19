@@ -53,13 +53,12 @@ for_window [title="Authentication Required" app_id="lxqt-policykit-agent"] float
 bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"
 
 # Adjust screen brightness with keys
-bindsym Mod4+Mod1+1 exec "brightnessctl set 10%"
-bindsym Mod4+Mod1+2 exec "brightnessctl set 20%"
-bindsym Mod4+Mod1+3 exec "brightnessctl set 30%"
-bindsym Mod4+Mod1+4 exec "brightnessctl set 40%"
-bindsym Mod4+Mod1+5 exec "brightnessctl set 50%"
-bindsym Mod4+Mod1+6 exec "brightnessctl set 60%"
-bindsym Mod4+Mod1+7 exec "brightnessctl set 70%"
-bindsym Mod4+Mod1+8 exec "brightnessctl set 80%"
-bindsym Mod4+Mod1+9 exec "brightnessctl set 90%"
-bindsym Mod4+Mod1+0 exec "brightnessctl set 100%"
+bindsym Mod4+Mod1+Up exec "light -A 10%"
+bindsym Mod4+Mod1+Down exec "light -U 10%"
+
+# Adjust volume with keys
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+bindsym Mod4+Mod1+Right exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+bindsym Mod4+Mod1+Left exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"

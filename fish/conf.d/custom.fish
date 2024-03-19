@@ -13,4 +13,5 @@ if status is-interactive
     bind '[3;5~' kill-word
     set -x NIXPKGS_ALLOW_UNFREE 1
     set -x NIXPKGS_ALLOW_INSECURE 1
+    set -x GTK_THEME Catppuccin-Mocha-Standard-Mauve-Dark
 end
