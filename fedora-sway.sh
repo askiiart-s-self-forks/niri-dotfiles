@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # assumes a Fedora Sway base with askiiart/configs/do-everything.bash already run
-# TODO: Add schildichat-desktop to askiiart.net repo, add fix-gamepad.service from askiiart/nix
+# TODO: Add fix-gamepad.service from askiiart/nix
 if [ $(whoami) == "root" ]; then
     echo "Run as a normal user, not root"
     exit 1
@@ -18,6 +18,8 @@ sudo cp -r ./grub/src/* /usr/share/grub/themes/
 rm -rf grub/
 echo 'GRUB_THEME=/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt' | sudo tee /etc/default/grub
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
 
 # greetd
 #sudo dnf install tuigreet -y
