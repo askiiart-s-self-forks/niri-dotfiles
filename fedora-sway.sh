@@ -7,8 +7,12 @@ fi
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 sudo dnf install i3status clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi wireguard-tools -y
-# also has waybar, which is unused, but maybe i'll use it idk
-sudo dnf remove Thunar imw unst foot mpv
+sudo dnf copr enable erikreider/SwayNotificationCenter
+sudo dnf install SwayNotificationCenter
+
+# also has waybar preinstalled, which is unused, but i'll probably use it idk
+sudo dnf remove Thunar imw unst foot mpv dunst
+sudo dnf autoremove
 
 # Install catppuccin grub theme
 git clone --depth=1 https://github.com/catppuccin/grub
