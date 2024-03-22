@@ -1,6 +1,9 @@
 # Use clipman for the clipboard manager
 exec wl-paste -t text --watch clipman store --no-persist
 
+# start nm-applet for network management
+exec nm-applet
+
 # Add screenshot and color picker
 bindsym Print exec grim -t png -c
 bindsym Mod4+Shift+P exec "mkdir $HOME/Pictures; export FILENAME=$HOME/Pictures/screenshot_$(date +%F_%H:%M:%S).png; slurp -d | xargs -I % grim -g % -t png -c $FILENAME; wl-copy --type image/png < $FILENAME"

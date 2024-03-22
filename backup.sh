@@ -73,3 +73,13 @@ fi
 # rofi
 rm -rf $GIT_DIR/rofi/
 cp -r $HOME/.config/rofi/ $GIT_DIR/rofi/
+
+# fontconfig
+rm -rf $GIT_DIR/fontconfig
+mkdir $GIT_DIR/fontconfig
+cp -r $HOME/.config/fontconfig/conf.d/* $GIT_DIR/fontconfig/
+
+# waybar
+rm -rf $GIT_DIR/waybar/
+mkdir $GIT_DIR/waybar/
+cp -r $HOME/.config/waybar/* $GIT_DIR/waybar/

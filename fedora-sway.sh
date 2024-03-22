@@ -6,11 +6,11 @@ if [ $(whoami) == "root" ]; then
 fi
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-sudo dnf install i3status clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi wireguard-tools -y
+sudo dnf install clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi wireguard-tools iperf3 zstd network-manager-applet -y
+sudo usermod -aG input $(whoami) # so that waybar's keyboard-state works
 sudo dnf copr enable erikreider/SwayNotificationCenter
 sudo dnf install SwayNotificationCenter
 
-# also has waybar preinstalled, which is unused, but i'll probably use it idk
 sudo dnf remove Thunar imw unst foot mpv dunst
 sudo dnf autoremove
 

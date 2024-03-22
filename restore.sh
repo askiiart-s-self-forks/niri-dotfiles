@@ -76,7 +76,7 @@ if [ ! -e ~/.themes/$variant ] && ! command_exists "nixos-rebuild"; then
     ln -sf "${HOME}/.themes/${variant}/gtk-4.0/" "${HOME}/.config/gtk-4.0"
     export GTK_THEME="Catppuccin-Mocha-Standard-Mauve-Dark:dark"
     mkdir ~/.config/gtk-3.0
-    echo -e "[Settings]\n${variant}" > ~/.config/gtk-3.0/settings.ini
+    echo -e "[Settings]\n${variant}" >~/.config/gtk-3.0/settings.ini
 fi
 
 # fix-gamepad.service
@@ -84,6 +84,16 @@ if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
     sudo cp $GIT_DIR/systemd/fix-gamepad.service /etc/systemd/system/
     sudo systemctl enable --now fix-gamepad.service
 fi
+
+# fontconfig
+rm -rf $HOME/.config/fontconfig/conf.d/
+mkdir $HOME/.config/fontconfig/conf.d/
+cp -r $GIT_DIR/fontconfig/* $HOME/.config/fontconfig/conf.d/
+
+# waybar
+rm -rf $HOME/.config/waybar/
+mkdir $HOME/.config/waybar/
+cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
 
 # VS code
 mkdir -p $HOME/.config/Code/User/

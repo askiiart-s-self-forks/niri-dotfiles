@@ -7,7 +7,7 @@ GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # gnome-keyring is for VS Code
 yay -S gnome-keyring lxqt-policykit --noconfirm --needed
-yay -S i3status j4-dmenu-desktop swaylock swaybg swaync clipman --noconfirm --needed
+yay -S waybar j4-dmenu-desktop swaylock swaybg swaync clipman --noconfirm --needed
 yay -S pipewire-pulse pavucontrol blueman bluetooth-support qpwgraph --noconfirm --needed
 yay -S brightnessctl --noconfirm --needed
 yay -S nemo gnome-calculator --noconfirm --needed
