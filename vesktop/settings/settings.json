@@ -62,7 +62,9 @@
             "enabled": false
         },
         "AlwaysTrust": {
-            "enabled": true
+            "enabled": true,
+            "domain": true,
+            "file": true
         },
         "AnonymiseFileNames": {
             "enabled": false
@@ -141,8 +143,11 @@
             "enableStreamQualityBypass": true,
             "transformStickers": true,
             "transformEmojis": true,
-            "transformCompoundSentence": false,
-            "emojiSize": 48
+            "transformCompoundSentence": true,
+            "emojiSize": 48,
+            "hyperLinkText": "{{NAME}}",
+            "useHyperLinks": true,
+            "stickerSize": 160
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -187,7 +192,8 @@
             "zoom": 2,
             "nearestNeighbour": false,
             "square": false,
-            "saveZoomValues": true
+            "saveZoomValues": true,
+            "zoomSpeed": 0.5
         },
         "InvisibleChat": {
             "enabled": false,
@@ -204,7 +210,9 @@
             "replaceEvents": true
         },
         "MemberCount": {
-            "enabled": true
+            "enabled": true,
+            "memberList": true,
+            "toolTip": true
         },
         "MessageClickActions": {
             "enabled": false
@@ -344,7 +352,9 @@
             "enabled": true
         },
         "PinDMs": {
-            "enabled": true
+            "enabled": true,
+            "dmSectioncollapsed": false,
+            "pinOrder": 0
         },
         "PlainFolderIcon": {
             "enabled": false
@@ -364,7 +374,8 @@
             "showInMessages": true,
             "showSelf": true,
             "pronounSource": 0,
-            "showInProfile": true
+            "showInProfile": true,
+            "pronounsFormat": "LOWERCASE"
         },
         "QuickMention": {
             "enabled": false
@@ -400,7 +411,8 @@
             "enabled": false
         },
         "SendTimestamps": {
-            "enabled": true
+            "enabled": true,
+            "replaceMessageContents": true
         },
         "ServerListIndicators": {
             "enabled": false
@@ -425,7 +437,7 @@
             "enabled": false
         },
         "ShowMeYourName": {
-            "enabled": true,
+            "enabled": false,
             "displayNames": false,
             "mode": "user-nick",
             "inReplies": false
@@ -564,6 +576,24 @@
         },
         "NewGuildSettings": {
             "enabled": false
+        },
+        "BetterRoleContext": {
+            "enabled": false
+        },
+        "BetterSettings": {
+            "enabled": false
+        },
+        "FriendsSince": {
+            "enabled": false
+        },
+        "OverrideForumDefaults": {
+            "enabled": false
+        },
+        "ResurrectHome": {
+            "enabled": false
+        },
+        "UnlockedAvatarZoom": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -576,6 +606,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1709943427384
+        "settingsSyncVersion": 1713151376792
     }
 }

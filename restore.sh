@@ -16,6 +16,7 @@ else
 fi
 cp $GIT_DIR/universal-shellrc.txt $HOME/.config/fish/conf.d/universal.fish
 fish -c 'fisher update'
+fish -c "tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Dark --show_time='24-hour format' --classic_prompt_separators=Vertical --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No"
 
 # kitty
 rm -rf $HOME/.config/kitty/

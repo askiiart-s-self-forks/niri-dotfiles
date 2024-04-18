@@ -1,1 +1,1 @@
-exec /usr/bin/budgie-desktop
+exec sway

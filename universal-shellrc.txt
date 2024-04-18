@@ -11,6 +11,11 @@ alias ls="ls --color=auto -CF"
 alias ll="ls -l"
 alias la="ls -a"
 
+# lol
+alias please="sudo"
+alias pwease="please"
+alias pls="please"
+
 # kitty stuff
 alias icat="kitten icat"
 alias s="kitten ssh"

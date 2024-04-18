@@ -3,7 +3,7 @@
 [postglobal]
 
 [filtering]
-enabled rulename "Move new sign-ins to low-priority" subject matchcase "Security alert" | subject matchcase "New device" | subject matchcase "New sign-in" move "#mh/Mailbox/Low-priority"
+enabled rulename "Move new sign-ins to low-priority" subject matchcase "Security alert" | subject matchcase "New device" | subject matchcase "New sign-in" | subject matchcase "[pixiv] New login notification" move "#mh/Mailbox/Low-priority"
 enabled rulename "Move Southwest marketing to spam and mark as read" from matchcase "SouthwestAirlines@iluv.southwest.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move Micro Center marketing to spam and mark as read" from matchcase "microcenter@microcenterinsider.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move TCC/BN marketing to spam and mark as read" from matchcase "sm8240@email.bncollege.com" mark_as_read move "#mh/Mailbox/Spam"
@@ -13,7 +13,7 @@ enabled rulename "Move Newegg marketing to spam and mark as read" from matchcase
 enabled rulename "Move Tumblr to spam and mark as read" from matchcase "no-reply@tumblr.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move Sonic to spam and mark as read" from matchcase "no-reply@sonicdrivein.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move ngrok to spam and mark as read" from matchcase "team@m.ngrok.com" mark_as_read move "#mh/Mailbox/Spam"
-enabled rulename "Move LinkedIn to spam and mark as read" from regexpcase ".*@linkedin.com" mark_as_read move "#mh/Mailbox/Spam"
+enabled rulename "Move LinkedIn to spam and mark as read" from regexpcase ".*linkedin.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move YouTube comments to low-priority" subject matchcase "New reply to a comment" & subject matchcase "replied to you" & from matchcase "noreply@youtube.com" move "#mh/Mailbox/Low-priority"
 enabled rulename "Move Pomerium to spam and mark as read" from regexpcase ".*@pomerium.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move Cults3d download notifications to spam and mark as read" subject matchcase "Download notification" & from matchcase "hello@cults3d.com" mark_as_read move "#mh/Mailbox/Spam"
@@ -48,7 +48,9 @@ enabled rulename "Move more YouTube comments to low-priority" subject matchcase 
 enabled rulename "Move Windscribe to spam and mark as read" from matchcase "noreply@windscribe.com" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move GeeksforGeeks to spam and mark as read" from matchcase "no-reply@geeksforgeeks.org" mark_as_read move "#mh/Mailbox/Spam"
 enabled rulename "Move Tallo to spam and mark as read" from regexp ".*@tallo.com" mark_as_read move "#mh/Mailbox/Spam"
-disabled rulename "Run gpg-email-helper" test "grep -- \"-----BEGIN PGP SIGNATURE-----\" %F" execute "python3 /home/askiiart/gpg-email-helper/gpg-email-helper.py %F"
+enabled rulename "Run gpg-email-helper" test "grep -- \"-----BEGIN PGP SIGNATURE-----\" %F" execute "python3 /home/askiiart/gpg-email-helper/gpg-email-helper.py %F"
 enabled rulename "Move Microsoft sign-ins to low-priority" from matchcase "account-security-noreply@accountprotection.microsoft.com" & subject matchcase "New sign-in detected" move "#mh/Mailbox/Low-priority"
 enabled rulename "Move GasBuddy to spam and mark as read" from regexpcase ".*@email.gasbuddy.com" mark_as_read move "#mh/Mailbox/Spam"
+enabled rulename "Move ScholarshipOwl to spam and mark as read" from regexpcase ".*@scholarshipowl.com" mark_as_read move "#mh/Mailbox/Spam"
+enabled rulename "Move St. John's U to spam and mark as read" from regexpcase ".*@stjohns.edu" mark_as_read move "#mh/Mailbox/Spam"
 

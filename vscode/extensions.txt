@@ -17,6 +17,7 @@ danielpinto8zz6.c-cpp-compile-run
 davidanson.vscode-markdownlint
 diegomolina.css-minify
 dustypomerleau.rust-syntax
+dzhavat.git-cheatsheet
 equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
 eserozvataf.one-dark-pro-monokai-darker
@@ -40,6 +41,7 @@ joelcrosby.one-dark-darker
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
 lacroixdavid1.vscode-format-context-menu
+laurenclark.sappho
 manuth.markdown-converter
 marlinfirmware.auto-build
 marvhen.reflow-markdown

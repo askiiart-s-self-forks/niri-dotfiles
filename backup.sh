@@ -32,6 +32,7 @@ rm -rf $GIT_DIR/vesktop
 cp -r $HOME/.config/vesktop/ $GIT_DIR
 rm -rf $GIT_DIR/vesktop/sessionData
 rm -rf $GIT_DIR/vesktop/Crashpad
+rm -rf $GIT_DIR/vesktop/vencordDist
 rm -f $GIT_DIR/vesktop/Singleton*
 
 # VS code

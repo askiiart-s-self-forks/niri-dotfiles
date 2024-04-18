@@ -4,7 +4,7 @@
     "github.copilot.enable": {
         "*": false,
         "plaintext": true,
-        "markdown": true,
+        "markdown": false,
         "scminput": false,
         "yaml": true,
         "python": true
@@ -73,14 +73,13 @@
     "inlineChat.showDiff": false,
     "mssql.connections": [
         {
-            "server": "localhost",
+            "server": "192.168.122.169",
             "database": "WideWorldImporters",
             "authenticationType": "SqlLogin",
-            "user": "ben",
+            "user": "sa",
             "password": "",
             "emptyPasswordInput": false,
             "savePassword": true,
-            "profileName": "vm wwi",
             "encrypt": "Mandatory",
             "trustServerCertificate": true,
             "connectTimeout": 15,
