@@ -10,7 +10,6 @@ if command_exists "nixos-rebuild"; then
     rm $GIT_DIR/fish/config.fish
     mv $GIT_DIR/fish/config.fish.backup $GIT_DIR/fish/config.fish
 fi
-mv $GIT_DIR/fish/conf.d/universal.fish $GIT_DIR/universal-shellrc.txt
 
 # kitty
 rm -rf $GIT_DIR/kitty
@@ -38,10 +37,17 @@ rm -f $GIT_DIR/vesktop/Singleton*
 # VS code
 rm -rf $GIT_DIR/vscode
 mkdir $GIT_DIR/vscode
-code --list-extensions >$GIT_DIR/vscode/extensions.txt
-cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
-cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
-cp $HOME/.vscode/argv.json $GIT_DIR/vscode/argv.json
+if command_exists "code"; then
+    code --list-extensions >$GIT_DIR/vscode/extensions.txt
+    cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
+    cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
+    cp $HOME/.vscode/argv.json $GIT_DIR/vscode/argv.json
+elif command_exists "code-oss"; then
+    code-oss --list-extensions >$GIT_DIR/vscode/extensions.txt
+    cp $HOME/.config/Code/User/keybindings.json $GIT_DIR/vscode/keybindings.json
+    cp $HOME/.config/Code/User/settings.json $GIT_DIR/vscode/settings.json
+    cp $HOME/.vscode-oss/argv.json $GIT_DIR/vscode/argv.json
+fi
 
 # i3
 rm -rf $GIT_DIR/i3
@@ -53,8 +59,8 @@ cp -r $HOME/.config/sway/ .
 
 # greetd (for sway)
 if [ -d /etc/greetd ]; then
-    rm $GIT_DIR/greetd/config.toml
-    cp /etc/greetd/config.toml $GIT_DIR/greetd/
+    rm -rf $GIT_DIR/greetd/
+    cp -r /etc/greetd/ $GIT_DIR/
 fi
 
 # Claws Mail configs
@@ -84,3 +90,8 @@ cp -r $HOME/.config/fontconfig/conf.d/* $GIT_DIR/fontconfig/
 rm -rf $GIT_DIR/waybar/
 mkdir $GIT_DIR/waybar/
 cp -r $HOME/.config/waybar/* $GIT_DIR/waybar/
+
+# sway runner
+# TODO: make this work on nix stuff
+cp /usr/bin/sway-runner $GIT_DIR/
+sudo chown $(whoami) sway-runner

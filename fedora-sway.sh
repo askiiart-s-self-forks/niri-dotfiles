@@ -6,7 +6,7 @@ if [ $(whoami) == "root" ]; then
 fi
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-sudo dnf install clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol light gnome-calculator wl-clipboard gedit kanshi wireguard-tools iperf3 zstd network-manager-applet -y
+sudo dnf install clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol brightnessctl gnome-calculator wl-clipboard gedit kanshi wireguard-tools iperf3 zstd network-manager-applet -y
 sudo usermod -aG input $(whoami) # so that waybar's keyboard-state works
 sudo dnf copr enable erikreider/SwayNotificationCenter
 sudo dnf install SwayNotificationCenter
@@ -21,8 +21,6 @@ sudo cp -r ./grub/src/* /usr/share/grub/themes/
 rm -rf grub/
 echo 'GRUB_THEME=/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt' | sudo tee /etc/default/grub
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-
-
 
 # greetd
 #sudo dnf install tuigreet -y

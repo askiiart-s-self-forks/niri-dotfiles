@@ -17,17 +17,20 @@ alias pwease="please"
 alias pls="please"
 
 # kitty stuff
-alias icat="kitten icat"
-alias s="kitten ssh"
+if [ $TERM = "xterm-kitty" ]
+    alias icat="kitten icat"
+    alias s="kitten ssh"
+end
 
 # NixOS
-alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
-alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
-alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all --rollback"
-alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
-alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
-alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
-
+if type -q nixos-rebuild
+     alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
+     alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
+     alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all --rollback"
+     alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
+     alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
+     alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
+end
 
 
 # git

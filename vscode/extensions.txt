@@ -80,7 +80,6 @@ ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vscode.remote-server
 ms-vscode.vscode-serial-monitor
-mwpb.java-prettier-formatter
 nicscott.gitkraken-dark
 nord.nord
 novy.vsc-gcode

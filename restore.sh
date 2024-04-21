@@ -14,7 +14,6 @@ if command_exists "nixos-rebuild"; then
 else
     cp -r $GIT_DIR/fish/ $HOME/.config/
 fi
-cp $GIT_DIR/universal-shellrc.txt $HOME/.config/fish/conf.d/universal.fish
 fish -c 'fisher update'
 fish -c "tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Dark --show_time='24-hour format' --classic_prompt_separators=Vertical --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No"
 
@@ -101,7 +100,17 @@ mkdir -p $HOME/.config/Code/User/
 mkdir -p $HOME/.vscode/
 cp $GIT_DIR/vscode/keybindings.json $HOME/.config/Code/User/
 cp $GIT_DIR/vscode/settings.json $HOME/.config/Code/User/
-for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
-cp $GIT_DIR/vscode/argv.json $HOME/.vscode/argv.json
+if command_exists "code"; then
+    for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
+    cp $GIT_DIR/vscode/argv.json $HOME/.vscode/argv.json
+elif command_exists "code-oss"; then
+    for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code-oss --install-extension $ext; done
+    cp $GIT_DIR/vscode/argv.json $HOME/.vscode-oss/argv.json
+fi
 
 echo "restore.sh done!"
+
+# sway-runner
+# TODO: make this work on nix too
+sudo cp $GIT_DIR/sway-runner /usr/bin/sway-runner
+sudo chown root /usr/bin/sway-runner

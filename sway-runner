@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+if ! [ -d /tmp/$UID-runtime-dir ]; then
+    mkdir /tmp/$UID-runtime-dir
+fi
+export XDG_RUNTIME_DIR=/tmp/$UID-runtime-dir
+
+sway $@
