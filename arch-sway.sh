@@ -10,7 +10,7 @@ yay -S gnome-keyring lxqt-policykit --noconfirm --needed
 yay -S waybar rofi swaylock swaybg swaync clipman wdisplays kanshi --noconfirm --needed
 yay -S pipewire-pulse pavucontrol blueman bluetooth-support qpwgraph --noconfirm --needed
 yay -S brightnessctl wl-clipboard --noconfirm --needed
-yay -S eom nemo gnome-calculator gedit wireguard-tools iperf3 zstd network-manager-applet --noconfirm --needed
+yay -S eom nemo gnome-calculator gedit wireguard-tools iperf3 zstd network-manager-applet gparted --noconfirm --needed
 # for screenshots and color picker
 yay -S slurp grim zenity imagemagick --noconfirm --needed
 

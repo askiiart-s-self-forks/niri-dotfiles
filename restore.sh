@@ -87,7 +87,7 @@ fi
 
 # fontconfig
 rm -rf $HOME/.config/fontconfig/conf.d/
-mkdir $HOME/.config/fontconfig/conf.d/
+mkdir -p $HOME/.config/fontconfig/conf.d/
 cp -r $GIT_DIR/fontconfig/* $HOME/.config/fontconfig/conf.d/
 
 # waybar

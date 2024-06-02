@@ -331,10 +331,6 @@
         "OpenInApp": {
             "enabled": false
         },
-        "Party mode 🎉": {
-            "enabled": false,
-            "superIntensePartyMode": 0
-        },
         "PermissionFreeWill": {
             "enabled": true,
             "lockout": true,
@@ -441,9 +437,6 @@
             "displayNames": false,
             "mode": "user-nick",
             "inReplies": false
-        },
-        "ShowTimeouts": {
-            "enabled": true
         },
         "SilentMessageToggle": {
             "enabled": false
@@ -594,6 +587,24 @@
         },
         "UnlockedAvatarZoom": {
             "enabled": false
+        },
+        "ShowHiddenThings": {
+            "enabled": true,
+            "showTimeouts": true,
+            "showInvitesPaused": true
+        },
+        "BetterSessions": {
+            "enabled": false
+        },
+        "ImplicitRelationships": {
+            "enabled": false
+        },
+        "StreamerModeOnStream": {
+            "enabled": false
+        },
+        "PartyMode": {
+            "enabled": false,
+            "superIntensePartyMode": 0
         }
     },
     "notifications": {
@@ -606,6 +617,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1713151376792
+        "settingsSyncVersion": 1716756452409
     }
 }

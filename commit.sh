@@ -6,3 +6,4 @@ cd $GIT_DIR
 git add .
 git commit -m "Automated backup: $(date --rfc-3339=s --utc)"
 git push
+cd -

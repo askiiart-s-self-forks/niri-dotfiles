@@ -31,8 +31,8 @@ set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $lockwall, mode "default"
     bindsym e exec --no-startup-id swaymsg exit, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym s exec --no-startup-id systemctl shutdown, mode "default"
+    bindsym r exec --no-startup-id reboot, mode "default"
+    bindsym s exec --no-startup-id shutdown now, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

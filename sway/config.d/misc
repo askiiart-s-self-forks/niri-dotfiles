@@ -5,7 +5,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 exec nm-applet
 
 # Add screenshot and color picker
-bindsym Print exec grim -t png -c
+bindsym Print exec "mkdir $HOME/Pictures; export FILENAME=$HOME/Pictures/screenshot_$(date +%F_%H:%M:%S).png; grim -t png -c $FILENAME; wl-copy --type image/png < $FILENAME"
 bindsym Mod4+Shift+P exec "mkdir $HOME/Pictures; export FILENAME=$HOME/Pictures/screenshot_$(date +%F_%H:%M:%S).png; slurp -d | xargs -I % grim -g % -t png -c $FILENAME; wl-copy --type image/png < $FILENAME"
 bindsym Mod4+Mod1+Shift+P exec "slurp -p | xargs -I % grim -g % -t png - | convert - -format '%[pixel:p{0,0}]' txt:- | tail --lines 1 | xargs -I % zenity --info --text=% --title='Color picker'"
 
@@ -59,10 +59,10 @@ for_window [title="Authentication Required" app_id="lxqt-policykit-agent"] float
 bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"
 
 # Adjust screen brightness with keys
-bindsym Mod4+Mod1+Up exec "brightnessctl 10%+"
-bindsym Mod4+Mod1+Down exec "brightnessctl 10%-"
-bindsym Mod4+Mod1+Shift+Up exec "brightnessctl 1&+"
-bindsym Mod4+Mod1+Shift+Down exec "brightnessctl 1%-"
+bindsym Mod4+Mod1+Up exec "brightnessctl set 10%+"
+bindsym Mod4+Mod1+Down exec "brightnessctl set 10%-"
+bindsym Mod4+Mod1+Shift+Up exec "brightnessctl set 1%+"
+bindsym Mod4+Mod1+Shift+Down exec "brightnessctl set 1%-"
 
 # Adjust volume with keys
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -73,3 +73,5 @@ bindsym Mod4+Mod1+Left exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 
 # pipewire
 exec "command_exists() { type '$1' &>/dev/null; }; if command_exists 'xbps-install'; then pipewire; fi"
+
+exec "kanshi"
