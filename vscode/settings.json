@@ -66,7 +66,7 @@
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "[nginx]": {
-        "editor.defaultFormatter": "raynigon.nginx-formatter"
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
     },
     "workbench.iconTheme": "catppuccin-mocha",
     "terminal.integrated.shellIntegration.enabled": false,
@@ -99,5 +99,17 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        //"warning",
+        //"info"
+    ],
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 300,
+    "editor.fontFamily": "'Fira Code Nerd', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true
 }

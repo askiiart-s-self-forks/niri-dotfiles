@@ -29,7 +29,6 @@ freebroccolo.theme-atom-one-dark
 github.copilot
 github.copilot-chat
 github.github-vscode-theme
-github.vscode-pull-request-github
 grapecity.gc-excelviewer
 gruntfuggly.todo-tree
 harryhopkinson.vim-theme
@@ -38,6 +37,7 @@ icrawl.discord-vscode
 itzselenux.lm-theme
 jnoortheen.nix-ide
 joelcrosby.one-dark-darker
+jscearcy.rust-doc-viewer
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
 lacroixdavid1.vscode-format-context-menu
@@ -90,7 +90,6 @@ procratstinator.gray-formatter
 raynigon.nginx-formatter
 rdnlsmith.linux-themes
 redhat.java
-redhat.vscode-xml
 redhat.vscode-yaml
 robbowen.synthwave-vscode
 rokoroku.vscode-theme-darcula
@@ -100,13 +99,15 @@ serayuzgur.crates
 shahilkumar.docxreader
 slevesque.vscode-zipexplorer
 st0pien.min-darker
+tamasfe.even-better-toml
 tatsy.vscode-3d-preview
-teabyii.ayu
 theaflowers.witch-hazel
 tinkertrain.theme-panda
 tlevesque2.duplicate-finder
 tomoki1207.pdf
+ttoowa.in-your-face-incredible
 twxs.cmake
+usernamehw.errorlens
 vinaykumar.vice
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode

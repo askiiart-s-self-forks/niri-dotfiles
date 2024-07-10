@@ -33,6 +33,8 @@ rm -rf $GIT_DIR/vesktop/sessionData
 rm -rf $GIT_DIR/vesktop/Crashpad
 rm -rf $GIT_DIR/vesktop/vencordDist
 rm -f $GIT_DIR/vesktop/Singleton*
+rm -f $GIT_DIR/vesktop/state.json
+rm -f $GIT_DIR/vesktop/.updaterId
 
 # VS code
 rm -rf $GIT_DIR/vscode
@@ -93,5 +95,7 @@ cp -r $HOME/.config/waybar/* $GIT_DIR/waybar/
 
 # sway runner
 # TODO: make this work on nix stuff
-cp /usr/bin/sway-runner $GIT_DIR/
-sudo chown $(whoami) sway-runner
+if command_exists "xbps-install"; then
+    cp /usr/bin/sway-runner $GIT_DIR/
+    sudo chown $(whoami) sway-runner
+fi
