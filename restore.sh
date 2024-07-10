@@ -61,23 +61,10 @@ cp $GIT_DIR/claws-mail/matcherrc $HOME/.claws-mail/matcherrc
 rm -rf $HOME/.config/rofi/
 cp -r $GIT_DIR/rofi $HOME/.config/rofi/
 
-# Install catppuccin GTK theme
-# TODO: Add automatic catppuccin GTK updates - would be easy, but no version numbering once install, need to figure that out
-ctp_version="v0.7.1"
-variant="Catppuccin-Mocha-Standard-Mauve-Dark"
-if [ ! -e ~/.themes/$variant ] && ! command_exists "nixos-rebuild"; then
-    mkdir -p ~/.themes &&
-        curl -L https://github.com/catppuccin/gtk/releases/download/$ctp_version/$variant.zip -o ~/.themes/catppuccin.zip &&
-        unzip ~/.themes/catppuccin.zip -d ~/.themes/ &&
-        rm -rf ~/.themes/catppuccin.zip
-
-    # gtk 4
-    rm -rf $HOME/.config/gtk-4.0
-    ln -sf "${HOME}/.themes/${variant}/gtk-4.0/" "${HOME}/.config/gtk-4.0"
-    export GTK_THEME="Catppuccin-Mocha-Standard-Mauve-Dark:dark"
-    mkdir ~/.config/gtk-3.0
-    echo -e "[Settings]\n${variant}" >~/.config/gtk-3.0/settings.ini
-fi
+# GTK dark theme
+mkdir ~/.config/gtk-3.0
+echo -e "[settings]\ngtk-application-prefer-dark-theme = true" > ~/.config/gtk-3.0/settings.ini
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 # fix-gamepad.service
 if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
@@ -112,5 +99,7 @@ echo "restore.sh done!"
 
 # sway-runner
 # TODO: make this work on nix too
-sudo cp $GIT_DIR/sway-runner /usr/bin/sway-runner
-sudo chown root /usr/bin/sway-runner
+if command_exists "xbps-install"; then
+    sudo cp $GIT_DIR/sway-runner /usr/bin/sway-runner
+    sudo chown root /usr/bin/sway-runner
+fi
