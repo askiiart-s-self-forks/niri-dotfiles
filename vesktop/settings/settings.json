@@ -31,7 +31,7 @@
             "enabled": true
         },
         "MessageAccessoriesAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MessageDecorationsAPI": {
             "enabled": true
@@ -413,9 +413,6 @@
         "ServerListIndicators": {
             "enabled": false
         },
-        "ServerProfile": {
-            "enabled": true
-        },
         "ShikiCodeblocks": {
             "enabled": true,
             "useDevIcon": "GREYSCALE",
@@ -605,6 +602,15 @@
         "PartyMode": {
             "enabled": false,
             "superIntensePartyMode": 0
+        },
+        "ServerInfo": {
+            "enabled": true
+        },
+        "MessageUpdaterAPI": {
+            "enabled": false
+        },
+        "UserSettingsAPI": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -617,6 +623,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1716756452409
+        "settingsSyncVersion": 1719848385601
     }
 }
