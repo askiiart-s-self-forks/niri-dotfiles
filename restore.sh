@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-shopt -s extglob
+shopt -s extglob # i don't even know what still uses this, if anything, but whatever... i think it's line 12? (commit b8ad9ef339)
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 command_exists() { type "$1" &>/dev/null; }
@@ -63,8 +63,9 @@ cp -r $GIT_DIR/rofi $HOME/.config/rofi/
 
 # GTK dark theme
 mkdir ~/.config/gtk-3.0
-echo -e "[settings]\ngtk-application-prefer-dark-theme = true" > ~/.config/gtk-3.0/settings.ini
+echo -e "[Settings]\ngtk-application-prefer-dark-theme = true" >~/.config/gtk-3.0/settings.ini
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 # fix-gamepad.service
 if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
@@ -82,6 +83,30 @@ rm -rf $HOME/.config/waybar/
 mkdir $HOME/.config/waybar/
 cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
 
+# sway-runner
+# TODO: make this work on nix too
+if command_exists "xbps-install"; then
+    sudo cp $GIT_DIR/sway-runner /usr/bin/sway-runner
+    sudo chown root /usr/bin/sway-runner
+fi
+
+# Librewolf
+# to make sure a profile exists to apply this to
+if [ $(find ~/.librewolf -mindepth 1 -maxdepth 1 -type d -name "*.*" | wc -l) -eq 0 ]; then
+    librewolf &
+    pkill librewolf
+    sleep 1
+fi
+
+cd ~/.librewolf
+for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
+    for line in $(cat $GIT_DIR/librewolf/prefs.js); do
+        if ! grep -q "$line" $dir/prefs.js; then
+            echo "$line" >>$dir/prefs.js
+        fi
+    done
+done
+
 # VS code
 mkdir -p $HOME/.config/Code/User/
 mkdir -p $HOME/.vscode/
@@ -96,10 +121,3 @@ elif command_exists "code-oss"; then
 fi
 
 echo "restore.sh done!"
-
-# sway-runner
-# TODO: make this work on nix too
-if command_exists "xbps-install"; then
-    sudo cp $GIT_DIR/sway-runner /usr/bin/sway-runner
-    sudo chown root /usr/bin/sway-runner
-fi

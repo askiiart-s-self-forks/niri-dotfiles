@@ -1,0 +1,3 @@
+- i3 is not used nor updated, and its script only exists for arch, however it *should* work. might be used soon but currently is super out of date and i have no plans to update it at the moment.
+- librewolf configs are "declarative", so-to-speak, and will not be included in `backup.sh`, they must be set in `prefs.js`. and if one of the already-existing settings it changed, it must be updated manually.
+- only currently updated: fedora w/ sway (same for the configs repo)

@@ -24,6 +24,9 @@ elif command_exists "rpm-ostree"; then
     rpm-ostree install SwayNotificationCenter
 fi
 
+# make GUI stuff work when running as root (e.g. gparted)
+xhost +SI:localuser:root
+
 # Install catppuccin grub theme
 #git clone --depth=1 https://github.com/catppuccin/grub
 #sudo mkdir /etc/grub-themes/
