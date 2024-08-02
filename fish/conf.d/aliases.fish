@@ -1,7 +1,7 @@
 # Stuff be used in init for any shell
 
 # docker/podman stuff
-alias docker="sudo docker"
+#alias docker="sudo docker"
 #alias docker="podman"
 alias dcompose="docker compose up -d --remove-orphans"
 alias ddu="docker compose down && dcompose"

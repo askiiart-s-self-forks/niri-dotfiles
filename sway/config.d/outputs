@@ -1,0 +1,7 @@
+output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_sync on
+output "Hewlett Packard HP ZR22w CN41250H24" transform 270
+
+output "Acer Technologies EK271U E 14160766B3W01" bg ~/.config/sway/backgrounds/2560x1440.png fill
+output "Hewlett Packard HP ZR22w CN41250H24" bg ~/.config/sway/backgrounds/1080x1920.png fill
+
+bindsym Mod4+o output "Acer Technologies EK271U E 14160766B3W01" toggle

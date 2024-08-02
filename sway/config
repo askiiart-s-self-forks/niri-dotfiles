@@ -25,7 +25,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # shutdown / restart / suspend...
-set $lockwall "swaylock -i ~/.config/sway/background.png"
+set $lockwall "swaylock -i ~/.config/sway/backgrounds/2560x1440.png"
 set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
 
 mode "$mode_system" {
@@ -43,15 +43,12 @@ bindsym $mod+BackSpace mode "$mode_system"
 
 exec waybar
 
-# background
-#exec --no-startup-id swaybg -i /home/askiiart/.config/sway/background.png
-
 ##### END Custom stuff #####
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/askiiart/.config/sway/background.png fill
+# output * idkidkidk fill
 #
 # Example configuration:
 #
