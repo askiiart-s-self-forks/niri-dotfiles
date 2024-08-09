@@ -108,7 +108,6 @@
         //"warning",
         //"info"
     ],
-    "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 300,
     "editor.fontFamily": "'Fira Code Nerd', 'Droid Sans Mono', 'monospace', monospace",
     "editor.fontLigatures": true,
