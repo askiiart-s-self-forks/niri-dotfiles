@@ -40,3 +40,5 @@ xhost +SI:localuser:root
 #sudo cp $GIT_DIR/greetd/config.toml /etc/greetd/config.toml
 #sudo systemctl disable lightdm.service
 #sudo systemctl enable greetd.service
+
+sudo sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
