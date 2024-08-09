@@ -58,6 +58,10 @@ cp -r $HOME/.config/i3/ .
 # sway
 rm -rf $GIT_DIR/sway
 cp -r $HOME/.config/sway/ .
+outputs=$(swaymsg -t get_outputs)
+width=$(echo $outputs | jq -r .[0].modes.[0].width)
+height=$(echo $outputs | jq -r .[0].modes.[0].height)
+sed -i "s/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/${width}x${height}\.png\"/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/widthxheight\.png\"/g" $GIT_DIR/sway/config
 
 # greetd (for sway)
 if [ -d /etc/greetd ]; then

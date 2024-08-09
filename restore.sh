@@ -42,6 +42,10 @@ cp -r $GIT_DIR/i3 $HOME/.config/
 # sway
 rm -rf $HOME/.config/sway
 cp -r $GIT_DIR/sway $HOME/.config/
+outputs=$(swaymsg -t get_outputs)
+width=$(echo $outputs | jq -r .[0].modes.[0].width)
+height=$(echo $outputs | jq -r .[0].modes.[0].height)
+sed -i "s/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/widthxheight\.png\"/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/${width}x${height}\.png\"/g" $HOME/.config/sway/config
 
 # greetd (for sway)
 if [ -d /etc/greetd ]; then
@@ -106,6 +110,9 @@ for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
         fi
     done
 done
+
+# WezTerm
+wezterm shell-completion --shell fish > ~/.config/fish/completions/wezterm.fish
 
 # VS code
 mkdir -p $HOME/.config/Code/User/
