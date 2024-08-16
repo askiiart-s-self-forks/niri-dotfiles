@@ -113,6 +113,8 @@ done
 
 # WezTerm
 wezterm shell-completion --shell fish > ~/.config/fish/completions/wezterm.fish
+cp $GIT_DIR/wezterm.lua ~/.wezterm.lua
+gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm-gui
 
 # VS code
 mkdir -p $HOME/.config/Code/User/

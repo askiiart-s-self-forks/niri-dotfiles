@@ -103,3 +103,6 @@ if command_exists "xbps-install"; then
     cp /usr/bin/sway-runner $GIT_DIR/
     sudo chown $(whoami) sway-runner
 fi
+
+# Wezterm
+cp ~/.wezterm.lua $GIT_DIR/wezterm.lua

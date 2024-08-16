@@ -1,2 +1,4 @@
 **/fishd.tmp*
 vscode/argv.json
+fish/completions/wezterm.fish
+fish/fish_variables

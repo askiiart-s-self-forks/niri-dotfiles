@@ -20,6 +20,9 @@ alias pls="please"
 if [ $TERM = "xterm-kitty" ]
     alias icat="kitten icat"
     alias s="kitten ssh"
+else
+    alias icat="wezterm imgcat"
+    alias s="ssh"
 end
 
 # NixOS
