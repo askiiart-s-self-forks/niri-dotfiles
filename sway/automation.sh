@@ -20,15 +20,3 @@ while [ "$(echo $outputs | jq -r .[$i])" != "null" ]; do
     generate $height $width
     ((i++))
 done
-
-
-
-
-
-
-
-
-
-
-
-

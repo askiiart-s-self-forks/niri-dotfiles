@@ -26,13 +26,14 @@ for_window [window_role="task_dialog"] floating enable
 
 # shutdown / restart / suspend...
 set $lockwall "swaylock -i ~/.config/sway/backgrounds/widthxheight.png"
-set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
+set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown, (u) suspend
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id $lockwall, mode "default"
     bindsym e exec --no-startup-id swaymsg exit, mode "default"
     bindsym r exec --no-startup-id reboot, mode "default"
     bindsym s exec --no-startup-id shutdown now, mode "default"
+bindsym u exec --no-startup-id "swaylock -i ~/.config/sway/backgrounds/2560x1440.png -f; systemctl suspend", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
