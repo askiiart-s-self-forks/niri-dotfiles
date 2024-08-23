@@ -16,7 +16,6 @@ ctenbrinke.vscode-tsv
 danielpinto8zz6.c-cpp-compile-run
 davidanson.vscode-markdownlint
 diegomolina.css-minify
-donjayamanne.githistory
 dustypomerleau.rust-syntax
 dzhavat.git-cheatsheet
 equinusocio.vsc-material-theme-icons
@@ -37,14 +36,11 @@ harryhopkinson.vim-theme
 hoovercj.vscode-settings-cycler
 icrawl.discord-vscode
 itzselenux.lm-theme
-jinxdash.prettier-rust
 jnoortheen.nix-ide
 joelcrosby.one-dark-darker
 jscearcy.rust-doc-viewer
-kelvin.vscode-sshfs
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
-l13rary.l13-diff
 lacroixdavid1.vscode-format-context-menu
 laurenclark.sappho
 lorettadevs.loretta-lua
@@ -57,7 +53,6 @@ mechatroner.rainbow-csv
 mhutchie.git-graph
 mohd-akram.vscode-html-format
 ms-azuretools.vscode-docker
-ms-dotnettools.vscode-dotnet-runtime
 ms-mssql.data-workspace-vscode
 ms-mssql.mssql
 ms-mssql.sql-bindings-vscode
@@ -102,7 +97,6 @@ redhat.vscode-yaml
 robbowen.synthwave-vscode
 rokoroku.vscode-theme-darcula
 rust-lang.rust-analyzer
-sanaajani.taskrunnercode
 shahilkumar.docxreader
 slevesque.vscode-zipexplorer
 st0pien.min-darker
@@ -115,7 +109,6 @@ tomoki1207.pdf
 ttoowa.in-your-face-incredible
 twxs.cmake
 usernamehw.errorlens
-vadimcn.vscode-lldb
 vinaykumar.vice
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
