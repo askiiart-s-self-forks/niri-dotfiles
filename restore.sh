@@ -130,3 +130,6 @@ elif command_exists "code-oss"; then
 fi
 
 echo "restore.sh done!"
+
+# default applications
+xdg-settings set default-web-browser librewolf.desktop
