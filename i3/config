@@ -189,4 +189,5 @@ bar {
         status_command i3status
 }
 
-include /home/askiiart/.config/i3/config.d/*.conf
+# wait does this even work??? i thought i3 didn't support this...
+include ~/.config/i3/config.d/*.conf

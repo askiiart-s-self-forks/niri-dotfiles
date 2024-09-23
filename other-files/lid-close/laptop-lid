@@ -1,2 +1,2 @@
 event=button/lid.*
-action=/home/askiiart/.config/i3/config.d/lid-close.sh
+action=~/.config/i3/config.d/lid-close.sh

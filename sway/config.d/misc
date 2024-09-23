@@ -75,3 +75,5 @@ bindsym Mod4+Mod1+Left exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 exec "command_exists() { type '$1' &>/dev/null; }; if command_exists 'xbps-install'; then pipewire; fi"
 
 exec "kanshi"
+
+bindsym Mod4+Shift+N exec "pkill -9 swaync; swaync"

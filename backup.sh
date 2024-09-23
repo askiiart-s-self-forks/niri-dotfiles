@@ -106,3 +106,6 @@ fi
 
 # Wezterm
 cp ~/.wezterm.lua $GIT_DIR/wezterm.lua
+
+# Git config
+cp ~/.gitconfig $GIT_DIR/gitconfig

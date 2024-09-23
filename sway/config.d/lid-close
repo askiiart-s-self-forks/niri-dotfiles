@@ -1,2 +1,2 @@
-bindswitch --reload --locked lid:on exec --no-startup-id /home/askiiart/.config/sway/lid-close.sh
+bindswitch --reload --locked lid:on exec --no-startup-id ~/.config/sway/lid-close.sh
 bindswitch --reload --locked lid:off output eDP-1 dpms on

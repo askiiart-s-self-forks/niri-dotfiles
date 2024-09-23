@@ -8,7 +8,8 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad"
+        "sway/scratchpad",
+        "custom/polycat"
     ],
     "modules-right": [
         "pulseaudio",
@@ -37,6 +38,10 @@
     //         "focused": "",
     //         "default": ""
     //     }
+    },
+    "custom/polycat": {
+        "exec": "polycat",
+        "restart-interval": 0
     },
     "keyboard-state": {
         "numlock": true,

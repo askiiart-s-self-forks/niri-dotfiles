@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-shopt -s extglob # i don't even know what still uses this, if anything, but whatever... i think it's line 12? (commit b8ad9ef339)
+shopt -s extglob  # used for not copying config.fish if it's nixos
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 command_exists() { type "$1" &>/dev/null; }
@@ -74,7 +74,7 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 # fix-gamepad.service
 if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
     sudo cp $GIT_DIR/systemd/fix-gamepad.service /etc/systemd/system/
-    sudo systemctl enable --now fix-gamepad.service
+    #sudo systemctl enable --now fix-gamepad.service
 fi
 
 # fontconfig
@@ -115,6 +115,9 @@ done
 wezterm shell-completion --shell fish > ~/.config/fish/completions/wezterm.fish
 cp $GIT_DIR/wezterm.lua ~/.wezterm.lua
 gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm-gui
+
+# Git config
+cp $GIT_DIR/gitconfig ~/.gitconfig
 
 # VS code
 mkdir -p $HOME/.config/Code/User/

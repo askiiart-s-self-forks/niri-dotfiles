@@ -2,4 +2,4 @@ output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_
 output "Hewlett Packard HP ZR22w CN41250H24" transform 270
 output "AU Optronics 0x463D" mode 1920x1080@60hz
 
-output * bg ~/bg-generation/logo.png center #1E1E2E
+output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E

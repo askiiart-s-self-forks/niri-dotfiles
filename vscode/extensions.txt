@@ -41,6 +41,7 @@ joelcrosby.one-dark-darker
 jscearcy.rust-doc-viewer
 kisstkondoros.vscode-gutter-preview
 kokoscript.loopytheme
+l13rary.l13-diff
 lacroixdavid1.vscode-format-context-menu
 laurenclark.sappho
 lorettadevs.loretta-lua
@@ -112,7 +113,6 @@ usernamehw.errorlens
 vinaykumar.vice
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
-vsciot-vscode.vscode-arduino
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency

@@ -1,6 +1,6 @@
 if status is-interactive
-    set -gx PATH $PATH ~/.cargo/bin/
     set -gx PATH $PATH /opt/clang-format-static
+    set -gx PATH $PATH ~/.local/bin/
     set -x GPG_TTY (tty)
     set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
     set -x EDITOR nvim
