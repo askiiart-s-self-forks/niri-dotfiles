@@ -18,8 +18,8 @@ if status is-interactive
     set -x XDG_DATA_HOME ~/.local/share
     set -x XDG_CONFIG_HOME ~/.config
     set -x XDG_STATE_HOME ~/.local/state
-    if not [ -d /tmp/$UID-runtime-dir ]
-        mkdir /tmp/$UID-runtime-dir
-    end
-    set -x XDG_RUNTIME_DIR /tmp/runtime-dir
+    #if not [ -d /tmp/$UID-runtime-dir ]
+    #    mkdir /tmp/$UID-runtime-dir
+    #end
+    #set -x XDG_RUNTIME_DIR /tmp/runtime-dir
 end

@@ -400,9 +400,6 @@
             "memberList": true,
             "voiceUsers": true
         },
-        "SearchReply": {
-            "enabled": false
-        },
         "SecretRingToneEnabler": {
             "enabled": false
         },
@@ -611,6 +608,9 @@
         },
         "UserSettingsAPI": {
             "enabled": true
+        },
+        "FullSearchContext": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -623,6 +623,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1719848385601
+        "settingsSyncVersion": 1727271960157
     }
 }

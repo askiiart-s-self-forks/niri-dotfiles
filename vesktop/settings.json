@@ -1,7 +1,7 @@
 {
-    "minimizeToTray": true,
+    "minimizeToTray": "on",
     "discordBranch": "stable",
-    "arRPC": true,
+    "arRPC": "on",
     "splashColor": "oklab(0.899401 -0.00192499 -0.00481987)",
     "splashBackground": "rgb(0, 7, 32)",
     "spellCheckLanguages": [

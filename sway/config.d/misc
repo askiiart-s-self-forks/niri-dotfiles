@@ -49,7 +49,9 @@ for_window [app_id="claws-mail" title="TLS certificate is unknown"] floating ena
 
 # other execs
 #exec /home/askiiart/.config/sway/dbus-sway-environment.sh
+
 exec swaync
+bindsym Mod4+Shift+N exec "sh -c 'pkill swaync; sleep 1; swaync'"
 
 # polkit
 exec --no-startup-id lxqt-policykit-agent
@@ -75,5 +77,3 @@ bindsym Mod4+Mod1+Left exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
 exec "command_exists() { type '$1' &>/dev/null; }; if command_exists 'xbps-install'; then pipewire; fi"
 
 exec "kanshi"
-
-bindsym Mod4+Shift+N exec "pkill -9 swaync; swaync"
