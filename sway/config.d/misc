@@ -51,7 +51,7 @@ for_window [app_id="claws-mail" title="TLS certificate is unknown"] floating ena
 #exec /home/askiiart/.config/sway/dbus-sway-environment.sh
 
 exec swaync
-bindsym Mod4+Shift+N exec "sh -c 'pkill swaync; sleep 1; swaync'"
+bindsym Mod4+Shift+N exec "pkill -9 swaync; swaync"
 
 # polkit
 exec --no-startup-id lxqt-policykit-agent
