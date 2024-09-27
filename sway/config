@@ -137,7 +137,6 @@ exec waybar
 # Workspaces:
 #
     # Switch to workspace
-<<<<<<< Updated upstream
     bindsym $mod+1 exec "~/.config/sway/switch-workspace.sh 1"
     bindsym $mod+2 exec "~/.config/sway/switch-workspace.sh 2"
     bindsym $mod+3 exec "~/.config/sway/switch-workspace.sh 3"
@@ -148,18 +147,6 @@ exec waybar
     bindsym $mod+8 exec "~/.config/sway/switch-workspace.sh 8"
     bindsym $mod+9 exec "~/.config/sway/switch-workspace.sh 9"
     bindsym $mod+0 exec "~/.config/sway/switch-workspace.sh 10"
-=======
-    bindsym $mod+1 exec '~/.config/sway/switch-workspace.sh 1'
-    bindsym $mod+2 exec '~/.config/sway/switch-workspace.sh 2'
-    bindsym $mod+3 exec '~/.config/sway/switch-workspace.sh 3'
-    bindsym $mod+4 exec '~/.config/sway/switch-workspace.sh 4'
-    bindsym $mod+5 exec '~/.config/sway/switch-workspace.sh 5'
-    bindsym $mod+6 exec '~/.config/sway/switch-workspace.sh 6'
-    bindsym $mod+7 exec '~/.config/sway/switch-workspace.sh 7'
-    bindsym $mod+8 exec '~/.config/sway/switch-workspace.sh 8'
-    bindsym $mod+9 exec '~/.config/sway/switch-workspace.sh 9'
-    bindsym $mod+0 exec '~/.config/sway/switch-workspace.sh 10'
->>>>>>> Stashed changes
     bindsym $mod+equal workspace side
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
