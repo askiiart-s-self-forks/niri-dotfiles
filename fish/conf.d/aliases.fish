@@ -1,46 +1,47 @@
-# Stuff be used in init for any shell
+if status is-interactive
+    # Stuff be used in init for any shell
 
-# docker/podman stuff
-#alias docker="sudo docker"
-#alias docker="podman"
-alias dcompose="docker compose up -d --remove-orphans"
-alias ddu="docker compose down && dcompose"
-alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
+    # docker/podman stuff
+    #alias docker="sudo docker"
+    #alias docker="podman"
+    alias dcompose="docker compose up -d --remove-orphans"
+    alias ddu="docker compose down && dcompose"
+    alias adb="sudo adb" # Needed on Fedora, not on Debian, IDK about other distros
 
-alias ls="ls --color=auto -CF"
-alias ll="ls -l"
-alias la="ls -a"
+    alias ls="ls --color=auto -CF"
+    alias ll="ls -l"
+    alias la="ls -a"
 
-# lol
-alias please="sudo"
-alias pwease="please"
-alias pls="please"
+    # lol
+    alias please="sudo"
+    alias pwease="please"
+    alias pls="please"
 
-# kitty stuff
-if [ $TERM = "xterm-kitty" ]
-    alias icat="kitten icat"
-    alias s="kitten ssh"
-else
-    alias icat="wezterm imgcat"
-    alias s="ssh"
-end
+    # kitty stuff
+    if [ $TERM = "xterm-kitty" ]
+        alias icat="kitten icat"
+        alias s="kitten ssh"
+    else
+        alias icat="wezterm imgcat"
+        alias s="ssh"
+    end
 
-# NixOS
-if type -q nixos-rebuild
-     alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
-     alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
-     alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all --rollback"
-     alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
-     alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
-     alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
-end
+    # NixOS
+    if type -q nixos-rebuild
+        alias nrs="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all"
+        alias nrb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all"
+        alias nrs-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild switch --upgrade-all --rollback"
+        alias nrb-rb="sudo NIXPKGS_ALLOW_INSECURE=1 nixos-rebuild build --upgrade-all --rollback"
+        alias hms="NIXPKGS_ALLOW_INSECURE=1 home-manager switch"
+        alias hmb="NIXPKGS_ALLOW_INSECURE=1 home-manager build"
+    end
 
 
-# git
-alias git-us="git submodule update --init --recursive"
+    # git
+    alias git-us="git submodule update --init --recursive"
 
-# switch between SSH and HTTPS remotes
-alias git-remote-switch="python3 -c \"import subprocess
+    # switch between SSH and HTTPS remotes
+    alias git-remote-switch="python3 -c \"import subprocess
 
 remote = subprocess.getoutput('git branch -vv')
 remote = remote[remote.find('[') + 1 : remote.find('/')]
@@ -57,4 +58,5 @@ else:
 
 exit(subprocess.getstatusoutput(f'git remote set-url {remote} {new_url}')[0])\""
 
-alias tf2='cd ~/.local/share/Steam/steamapps/common/Team\ Fortress\ 2/; ~/.steam/steam/ubuntu12_64/steam-runtime-sniper/run ./tf.sh -- -windowed -w 1280 -h 720 -secure -steam'
+    alias tf2='cd ~/.local/share/Steam/steamapps/common/Team\ Fortress\ 2/; ~/.steam/steam/ubuntu12_64/steam-runtime-sniper/run ./tf.sh -- -windowed -w 1280 -h 720 -secure -steam'
+end
