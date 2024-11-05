@@ -365,14 +365,6 @@
         "PreviewMessage": {
             "enabled": false
         },
-        "PronounDB": {
-            "enabled": true,
-            "showInMessages": true,
-            "showSelf": true,
-            "pronounSource": 0,
-            "showInProfile": true,
-            "pronounsFormat": "LOWERCASE"
-        },
         "QuickMention": {
             "enabled": false
         },
@@ -611,6 +603,77 @@
         },
         "FullSearchContext": {
             "enabled": false
+        },
+        "UserMessagesPronouns": {
+            "enabled": true,
+            "showInMessages": true,
+            "showSelf": true,
+            "pronounSource": 0,
+            "showInProfile": true,
+            "pronounsFormat": "LOWERCASE"
+        },
+        "DynamicImageModalAPI": {
+            "enabled": true
+        },
+        "AccountPanelServerProfile": {
+            "enabled": false
+        },
+        "AlwaysExpandRoles": {
+            "enabled": false
+        },
+        "AppleMusicRichPresence": {
+            "enabled": false
+        },
+        "ConsoleJanitor": {
+            "enabled": false
+        },
+        "CopyEmojiMarkdown": {
+            "enabled": false
+        },
+        "CopyFileContents": {
+            "enabled": false
+        },
+        "CtrlEnterSend": {
+            "enabled": false
+        },
+        "CustomIdle": {
+            "enabled": false
+        },
+        "DontRoundMyTimestamps": {
+            "enabled": false
+        },
+        "FixImagesQuality": {
+            "enabled": false
+        },
+        "ImageLink": {
+            "enabled": false
+        },
+        "MentionAvatars": {
+            "enabled": false
+        },
+        "MessageLatency": {
+            "enabled": false
+        },
+        "NoMaskedUrlPaste": {
+            "enabled": false
+        },
+        "NoOnboardingDelay": {
+            "enabled": false
+        },
+        "NoServerEmojis": {
+            "enabled": false
+        },
+        "PauseInvitesForever": {
+            "enabled": false
+        },
+        "ReplaceGoogleSearch": {
+            "enabled": false
+        },
+        "ReplyTimestamp": {
+            "enabled": false
+        },
+        "Summaries": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -623,6 +686,6 @@
         "authenticated": true,
         "url": "https://api.vencord.dev/",
         "settingsSync": true,
-        "settingsSyncVersion": 1727271960157
+        "settingsSyncVersion": 1730605482947
     }
 }

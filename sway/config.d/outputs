@@ -1,6 +1,9 @@
 output "Acer Technologies EK271U E 14160766B3W01" mode 2560x1440@100hz adaptive_sync on position 0,480
-output "Hewlett Packard HP ZR22w CN41250H24" transform 270
-output "Hewlett Packard HP ZR22w CN41250FHX" transform 270 position 2560,0
-workspace side output "Hewlett Packard HP ZR22w CN41250FHX"
+
+output "Hewlett Packard HP ZR22w CN41250H24" transform 270 position 2560,0
+workspace right output "Hewlett Packard HP ZR22w CN41250H24"
+
+output "Hewlett Packard HP ZR22w CN41250FHX" transform 270 position -1080,-40
+workspace left output "Hewlett Packard HP ZR22w CN41250FHX"
 
 output * bg ~/.config/sway/backgrounds/logo.png center #1E1E2E

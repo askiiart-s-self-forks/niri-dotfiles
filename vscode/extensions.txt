@@ -1,4 +1,3 @@
-1yib.rust-bundle
 afmicc.getterandsettergenerator
 ahmadalli.vscode-nginx-conf
 andischerer.theme-atom-one-dark
@@ -90,7 +89,6 @@ novy.vsc-gcode
 phplasma.csv-to-table
 pilleye.dusk-theme
 platformio.platformio-ide
-procratstinator.gray-formatter
 raynigon.nginx-formatter
 rdnlsmith.linux-themes
 redhat.java
