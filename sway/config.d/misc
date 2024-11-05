@@ -27,7 +27,7 @@ for_window [title = "Administrator privileges required"] floating enable
 # librewolf floating windows
 for_window [title = "About LibreWolf"] floating enable
 for_window [window_role = "About"] floating enable
-for_window [app_id="LibreWolf" title="Library"] floating enable, border pixel 1, sticky enable, resize set 800 500
+for_window [app_id="LibreWolf" title="^Library$"] floating enable, border pixel 1, sticky enable, resize set 800 500
 
 # steam floating windows
 for_window [class="steam" title="Friends List"] floating enable, resize set 300 600
