@@ -22,3 +22,7 @@ My dotfiles for:
 - and whatever other stuff i end up adding but forget to put in this list
 
 NOTE: Sway uses swayfx now, which has a bunch of effects
+
+---
+
+![A screenshot of fastfetch (like neofetch) running with these dotfiles](/screenshot.png)
