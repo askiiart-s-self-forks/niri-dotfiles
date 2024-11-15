@@ -9,7 +9,7 @@ My dotfiles for:
 - gpg
 - Vencord Desktop (Vesktop)
 - i3
-- sway
+- ~~sway~~ [SwayFX](https://github.com/WillPower3309/swayfx)
 - VS Code
 - Claws Mail
 - Rofi
