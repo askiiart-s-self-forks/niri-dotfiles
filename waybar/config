@@ -41,7 +41,7 @@
     },
     "custom/polycat": {
         "exec": "polycat",
-        "interval": "once"
+        "restart-interval": 0
     },
     "keyboard-state": {
         "numlock": true,

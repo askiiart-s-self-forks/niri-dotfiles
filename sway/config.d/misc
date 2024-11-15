@@ -45,7 +45,7 @@ for_window [title="^Steam Keyboard$"] floating enable
 for_window [class="Minecraft.*"] floating enable
 
 # make claws mail TLS thing float
-for_window [app_id="claws-mail" title="TLS certificate is unknown"] floating enable, resize set 600 400
+for_window [app_id="claws-mail" title="^TLS certificate is unknown$"] floating enable, resize set 600 400
 
 # other execs
 #exec /home/askiiart/.config/sway/dbus-sway-environment.sh
@@ -55,7 +55,7 @@ bindsym Mod4+Shift+N exec "pkill -9 swaync; swaync"
 
 # polkit
 exec --no-startup-id lxqt-policykit-agent
-for_window [title="Authentication Required" app_id="lxqt-policykit-agent"] floating enable, resize set 350 200
+for_window [title="^Authentication Required$" app_id="lxqt-policykit-agent"] floating enable, resize set 350 200
 
 # lock when Scroll_Lock is pressed
 bindsym Scroll_Lock exec --no-startup-id $lockwall, mode "default"

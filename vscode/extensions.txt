@@ -89,6 +89,7 @@ novy.vsc-gcode
 phplasma.csv-to-table
 pilleye.dusk-theme
 platformio.platformio-ide
+procratstinator.gray-formatter
 raynigon.nginx-formatter
 rdnlsmith.linux-themes
 redhat.java
