@@ -11,3 +11,14 @@ My dotfiles for:
 - i3
 - sway
 - VS Code
+- Claws Mail
+- Rofi
+- GnuPG
+- Git
+- WezTerm
+- greetd
+- fonts
+- Waybar
+- and whatever other stuff i end up adding but forget to put in this list
+
+NOTE: Sway uses swayfx now, which has a bunch of effects

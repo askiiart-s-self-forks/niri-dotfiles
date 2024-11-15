@@ -1,0 +1,19 @@
+# blur
+blur enable
+
+# shadows
+shadows enable
+shadows_on_csd enable
+# the docs say the max is 100, it's actually 99 (csd = client-side decoration)
+shadow_blur_radius 5
+shadow_color #cba6f7f7
+shadow_inactive_color #cba6f7e7
+
+# other
+corner_radius 12
+
+# waybar config
+layer_effects 'waybar' 'blur enable; shadows disable; corner_radius 12'
+
+titlebar_separator disable
+gaps inner 1
