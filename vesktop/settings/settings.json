@@ -68,7 +68,7 @@
             "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": false
+            "enabled": true
         },
         "WebRichPresence (arRPC)": {
             "enabled": false
@@ -89,10 +89,10 @@
             "enabled": false
         },
         "BetterUploadButton": {
-            "enabled": false
+            "enabled": true
         },
         "BiggerStreamPreview": {
-            "enabled": false
+            "enabled": true
         },
         "BlurNSFW": {
             "enabled": false
@@ -101,7 +101,7 @@
             "enabled": false
         },
         "ClearURLs": {
-            "enabled": false
+            "enabled": true
         },
         "ColorSighted": {
             "enabled": false
@@ -152,13 +152,15 @@
             "stickerSize": 160
         },
         "FakeProfileThemes": {
-            "enabled": false
+            "enabled": true,
+            "nitroFirst": true
         },
         "FavoriteEmojiFirst": {
             "enabled": true
         },
         "FavoriteGifSearch": {
-            "enabled": false
+            "enabled": false,
+            "searchOption": "hostandpath"
         },
         "FixSpotifyEmbeds": {
             "enabled": false
@@ -209,7 +211,11 @@
         },
         "LoadingQuotes": {
             "enabled": false,
-            "replaceEvents": true
+            "replaceEvents": true,
+            "enablePluginPresetQuotes": true,
+            "enableDiscordPresetQuotes": false,
+            "additionalQuotes": "",
+            "additionalQuotesDelimiter": "|"
         },
         "MemberCount": {
             "enabled": true,
@@ -366,14 +372,6 @@
         },
         "PreviewMessage": {
             "enabled": false
-        },
-        "PronounDB": {
-            "enabled": true,
-            "showInMessages": true,
-            "showSelf": true,
-            "pronounSource": 0,
-            "showInProfile": true,
-            "pronounsFormat": "LOWERCASE"
         },
         "QuickMention": {
             "enabled": false
@@ -571,16 +569,21 @@
             "enabled": false
         },
         "BetterRoleContext": {
-            "enabled": false
+            "enabled": true
         },
         "BetterSettings": {
-            "enabled": false
+            "enabled": true,
+            "disableFade": true,
+            "organizeMenu": true,
+            "eagerLoad": true
         },
         "FriendsSince": {
             "enabled": false
         },
         "OverrideForumDefaults": {
-            "enabled": false
+            "enabled": false,
+            "defaultLayout": 1,
+            "defaultSortOrder": 0
         },
         "ResurrectHome": {
             "enabled": false
@@ -597,10 +600,13 @@
             "disableDisallowedDiscoveryFilters": true
         },
         "BetterSessions": {
-            "enabled": false
+            "enabled": true,
+            "backgroundCheck": false,
+            "checkInterval": 20
         },
         "ImplicitRelationships": {
-            "enabled": false
+            "enabled": false,
+            "sortByAffinity": true
         },
         "StreamerModeOnStream": {
             "enabled": false
@@ -658,10 +664,10 @@
             "enabled": false
         },
         "NoMaskedUrlPaste": {
-            "enabled": false
+            "enabled": true
         },
         "NoOnboardingDelay": {
-            "enabled": false
+            "enabled": true
         },
         "NoServerEmojis": {
             "enabled": false
@@ -676,7 +682,8 @@
             "enabled": false
         },
         "Summaries": {
-            "enabled": false
+            "enabled": true,
+            "summaryExpiryThresholdDays": 3
         },
         "ShowTimeoutDuration": {
             "enabled": false
@@ -688,10 +695,10 @@
             "enabled": false
         },
         "VoiceDownload": {
-            "enabled": false
+            "enabled": true
         },
         "VolumeBooster": {
-            "enabled": false
+            "enabled": true
         },
         "WebScreenShareFixes": {
             "enabled": true
@@ -700,6 +707,20 @@
             "enabled": true
         },
         "FullSearchContext": {
+            "enabled": false
+        },
+        "UserMessagesPronouns": {
+            "enabled": true,
+            "showInMessages": true,
+            "showSelf": true,
+            "pronounSource": 0,
+            "showInProfile": true,
+            "pronounsFormat": "LOWERCASE"
+        },
+        "DynamicImageModalAPI": {
+            "enabled": true
+        },
+        "FixImagesQuality": {
             "enabled": false
         }
     },
@@ -713,6 +734,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1728585500660
+        "settingsSyncVersion": 1731856858102
     }
 }
