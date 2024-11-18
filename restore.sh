@@ -98,6 +98,7 @@ fi
 # to make sure a profile exists to apply this to
 if [ $(find ~/.librewolf -mindepth 1 -maxdepth 1 -type d -name "*.*" | wc -l) -eq 0 ]; then
     librewolf &
+    sleep 1
     pkill librewolf
     sleep 1
 fi

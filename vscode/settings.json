@@ -113,5 +113,8 @@
     "editor.fontLigatures": true,
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     }
 }

@@ -37,6 +37,7 @@ compose_subject_format=
 compose_body_format=Hello,\n
 show_compose_margin=0
 type_any_header=0
+notify_pasted_attachments=1
 linewrap_length=72
 linewrap_quotation=1
 linewrap_pastes=1

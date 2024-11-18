@@ -93,6 +93,7 @@ procratstinator.gray-formatter
 raynigon.nginx-formatter
 rdnlsmith.linux-themes
 redhat.java
+redhat.vscode-xml
 redhat.vscode-yaml
 robbowen.synthwave-vscode
 rokoroku.vscode-theme-darcula
