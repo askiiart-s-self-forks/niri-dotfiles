@@ -1,0 +1,79 @@
+/* Title bar */
+.titlebar-buttonbox {
+    display: none !important;
+}
+
+.titlebar-spacer {
+    display: none !important;
+}
+
+/* Tab bar */
+:root {
+    --tab-border-radius: 50px !important;
+    --tabs-border-color: transparent !important;
+}
+#navigator-toolbox {
+    border: 0px !important;
+}
+
+#TabsToolbar {
+    margin-left: 35vw !important;
+}
+
+/* Nav bar*/
+#nav-bar {
+    background: transparent !important;
+    margin-top: -38px !important;
+    margin-bottom: 3px !important;
+    margin-right: 65vw !important;
+}
+
+/* URL bar */
+/*
+#back-button {
+    display: none !important;
+}
+
+#forward-button {
+    display: none !important;
+}
+*/
+/*#tracking-protection-icon-container {
+    display: none !important;
+}*/
+
+#urlbar-container {
+    width: unset !important;
+    min-width: 0px !important;
+    transition: min-width 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition-property: min-width transform;
+}
+
+#nav-bar[urlbar-exceeds-toolbar-bounds="true"] #urlbar-container {
+    min-width: 100vw !important;
+    border: 0px none !important;
+    transform: translateX(-112px);
+    z-index: 999999 !important;
+}
+
+#urlbar-background, #searchbar {
+    border: 0px none !important;
+}
+
+#urlbar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#page-action-buttons {
+    display: none !important;
+}
+
+#PanelUI-button {
+    display: none !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+    box-shadow: none !important;
+}

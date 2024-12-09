@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-shopt -s extglob  # used for not copying config.fish if it's nixos
+shopt -s extglob # used for not copying config.fish if it's nixos, and for librewolf
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 command_exists() { type "$1" &>/dev/null; }
@@ -107,15 +107,16 @@ fi
 
 cd ~/.librewolf
 for dir in $(find . -mindepth 1 -maxdepth 1 -type d -name "*.*"); do
-    for line in $(cat $GIT_DIR/librewolf/prefs.js); do
+    cp -r $GIT_DIR/librewolf/!(prefs.js) $dir
+    while read line; do
         if ! grep -q "$line" $dir/prefs.js; then
-            echo "$line" >>$dir/prefs.js
+            echo "$line" | tee -a $dir/prefs.js
         fi
-    done
+    done <$GIT_DIR/librewolf/prefs.js
 done
 
 # WezTerm
-wezterm shell-completion --shell fish > ~/.config/fish/completions/wezterm.fish
+wezterm shell-completion --shell fish >~/.config/fish/completions/wezterm.fish
 cp $GIT_DIR/wezterm.lua ~/.wezterm.lua
 gsettings set org.cinnamon.desktop.default-applications.terminal exec wezterm-gui
 
