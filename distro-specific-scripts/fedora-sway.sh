@@ -10,7 +10,7 @@ command_exists() { type "$1" &>/dev/null; }
 GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 if command_exists "dnf"; then
-    sudo dnf install clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol brightnessctl gnome-calculator wl-clipboard gedit kanshi wireguard-tools iperf3 zstd network-manager-applet -y
+    sudo dnf install clipman swaybg swaylock slurp grim zenity wdisplays eom nemo pavucontrol brightnessctl gnome-calculator wl-clipboard gedit gedit-plugin-textsize kanshi wireguard-tools iperf3 zstd network-manager-applet -y
     sudo usermod -aG input $(whoami) # so that waybar's keyboard-state works
     sudo dnf copr enable erikreider/SwayNotificationCenter
     sudo dnf install SwayNotificationCenter
