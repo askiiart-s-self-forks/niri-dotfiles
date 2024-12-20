@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 command_exists() { type "$1" &>/dev/null; }
 
-cd distro-specific-scripts/
+cd $GIT_DIR/distro-specific-scripts/
 distro=""
 
 if command_exists "pacman"; then
