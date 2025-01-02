@@ -1,7 +1,7 @@
 [user]
 	name = askiiart
 	email = dev@askiiart.net
-	signingKey = 0x858969DCCC2E792D
+	signingKey = 4BA41BD58C088A98622B9A1A7939D59EC80C3C21
 [commit]
 	gpgsign = true
 [init]
