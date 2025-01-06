@@ -58,3 +58,4 @@ else:
 exit(subprocess.getstatusoutput(f'git remote set-url {remote} {new_url}')[0])\""
 
 alias venv="if ! test -d ./.venv/; python3 -m venv .venv; end; source ./.venv/bin/activate.fish"
+alias py-dep="pip install -r requirements.txt"
