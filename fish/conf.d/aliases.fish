@@ -57,4 +57,4 @@ else:
 
 exit(subprocess.getstatusoutput(f'git remote set-url {remote} {new_url}')[0])\""
 
-alias tf2='cd ~/.local/share/Steam/steamapps/common/Team\ Fortress\ 2/; ~/.steam/steam/ubuntu12_64/steam-runtime-sniper/run ./tf.sh -- -windowed -w 1280 -h 720 -secure -steam'
+alias venv="if ! test -d ./.venv/; python3 -m venv .venv; end; source ./.venv/bin/activate.fish"
