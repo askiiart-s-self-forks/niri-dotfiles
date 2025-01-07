@@ -129,10 +129,10 @@ mkdir -p $HOME/.vscode/
 cp $GIT_DIR/vscode/keybindings.json $HOME/.config/Code/User/
 cp $GIT_DIR/vscode/settings.json $HOME/.config/Code/User/
 if command_exists "code"; then
-    for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code --install-extension $ext; done
+    code $(for ext in $(cat $GIT_DIR/vscode/extensions.txt); do echo -n "--install-extension $ext "; done)
     cp $GIT_DIR/vscode/argv.json $HOME/.vscode/argv.json
 elif command_exists "code-oss"; then
-    for ext in $(cat $GIT_DIR/vscode/extensions.txt); do code-oss --install-extension $ext; done
+    code-oss $(for ext in $(cat $GIT_DIR/vscode/extensions.txt); do echo -n "--install-extension $ext "; done)
     cp $GIT_DIR/vscode/argv.json $HOME/.vscode-oss/argv.json
 fi
 
