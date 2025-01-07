@@ -68,7 +68,10 @@
             "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": true
+            "enabled": true,
+            "anonymiseByDefault": true,
+            "method": 0,
+            "randomisedLength": 7
         },
         "WebRichPresence (arRPC)": {
             "enabled": false
@@ -149,7 +152,8 @@
             "emojiSize": 48,
             "hyperLinkText": "{{NAME}}",
             "useHyperLinks": true,
-            "stickerSize": 160
+            "stickerSize": 160,
+            "disableEmbedPermissionCheck": false
         },
         "FakeProfileThemes": {
             "enabled": true,
@@ -195,7 +199,7 @@
             "size": 100,
             "zoom": 2,
             "nearestNeighbour": false,
-            "square": false,
+            "square": true,
             "saveZoomValues": true,
             "zoomSpeed": 0.5
         },
@@ -400,7 +404,8 @@
             "memberList": true,
             "voiceUsers": true,
             "reactorsList": true,
-            "colorChatMessages": false
+            "colorChatMessages": false,
+            "pollResults": true
         },
         "SecretRingToneEnabler": {
             "enabled": false
@@ -734,6 +739,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1731856858102
+        "settingsSyncVersion": 1735789651501
     }
 }
