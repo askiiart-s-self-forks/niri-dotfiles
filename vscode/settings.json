@@ -115,6 +115,15 @@
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
     "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    }
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+    },
+    "remote.SSH.connectTimeout": 30,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "fedora-desk": "linux"
+    },
+    "yaml.format.singleQuote": true,
+    "evenBetterToml.formatter.indentEntries": false,
+    "evenBetterToml.formatter.indentTables": true,
+    "evenBetterToml.formatter.indentString": "  "
 }
