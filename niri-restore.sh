@@ -5,3 +5,4 @@ GIT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 rm -rf $HOME/.config/niri
 cp -r $GIT_DIR/niri $HOME/.config/
 systemctl --user add-wants niri.service waybar.service
+systemctl --user add-wants niri.service swaync.service

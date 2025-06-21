@@ -51,7 +51,7 @@ sed -i "s/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/widthxhei
 rm -rf $HOME/.config/niri
 cp -r $GIT_DIR/niri $HOME/.config/
 systemctl --user add-wants niri.service waybar.service
-
+systemctl --user add-wants niri.service swaync.service
 
 # greetd (for sway)
 if [ -d /etc/greetd ]; then

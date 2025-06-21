@@ -33,3 +33,4 @@ My dotfiles for:
 
 - I'm currently away and only have an ARM Windows laptop, plus given niri's borked in Hyper-V for me, and somewhat borked in WSL, I can't test much - it should be tested and fixed 2025-06-21.
 - do [this](https://github.com/YaLTeR/niri/wiki/Configuration:-Named-Workspaces) for left and right monitors
+- fix Mod+Shift+{H,L}
