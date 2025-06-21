@@ -16,7 +16,7 @@ input {
             // layout "us,ru"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
             layout "us"
-            options "compose:lwin,mod_led:compose,lv3:ralt_switch,eurosign:e"
+            options "compose:lwin,mod_led:compose,lv3:caps_switch_capslock_with_ctrl,eurosign:e"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -107,13 +107,13 @@ output "Acer Technologies EK271U E 14160766B3W01" {
 }
 
 output "Hewlett Packard HP ZR22w CN41250H24" {
-    transform 270
+    transform "270"
     position x=2560 y=-480
     backdrop-color "#1e1e2e"
 }
 
 output "Hewlett Packard HP ZR22w CN41250FHX" {
-    transform 270
+    transform "270"
     position x=-1080 y=-520
     backdrop-color "#1e1e2e"
 }
@@ -432,14 +432,14 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Caps+Left  { focus-monitor-left; }
-    Mod+Caps+Down  { focus-monitor-down; }
-    Mod+Caps+Up    { focus-monitor-up; }
-    Mod+Caps+Right { focus-monitor-right; }
-    Mod+Caps+H     { focus-monitor-left; }
-    Mod+Caps+J     { focus-monitor-down; }
-    Mod+Caps+K     { focus-monitor-up; }
-    Mod+Caps+L     { focus-monitor-right; }
+    Mod+Caps_Lock+Left  { focus-monitor-left; }
+    Mod+Caps_Lock+Down  { focus-monitor-down; }
+    Mod+Caps_Lock+Up    { focus-monitor-up; }
+    Mod+Caps_Lock+Right { focus-monitor-right; }
+    Mod+Caps_Lock+H     { focus-monitor-left; }
+    Mod+Caps_Lock+J     { focus-monitor-down; }
+    Mod+Caps_Lock+K     { focus-monitor-up; }
+    Mod+Caps_Lock+L     { focus-monitor-right; }
 
     // Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -452,7 +452,7 @@ binds {
 
     // Alternatively, there are commands to move just a single window:
     Mod+Shift+Minus  { move-window-to-monitor-left; }
-    Mod+Shift+Equal==  { move-window-to-monitor-right; }
+    Mod+Shift+Equal  { move-window-to-monitor-right; }
     
 
     // And you can also move a whole workspace to another monitor:
@@ -580,7 +580,7 @@ binds {
     Mod+Alt+L { set-column-width "+10%"; }
     // Finer height adjustments when in column with other windows.
     Mod+Alt+K { set-window-height "-10%"; }
-    Mod+ShAltift+J { set-window-height "+10%"; }
+    Mod+Alt+J { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Shift+Space       { toggle-window-floating; }
@@ -619,6 +619,10 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P allow-inhibiting=false { power-off-monitors; }
+
+    // fake fullscreen
+    // program believes it's fullscreen, actually windowed
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 }
 
 spawn-at-startup "xwayland-satellite :3"
