@@ -47,6 +47,12 @@ width=$(echo $outputs | jq -r .[0].modes.[0].width)
 height=$(echo $outputs | jq -r .[0].modes.[0].height)
 sed -i "s/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/widthxheight\.png\"/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/${width}x${height}\.png\"/g" $HOME/.config/sway/config
 
+# niri
+rm -rf $HOME/.config/niri
+cp -r $GIT_DIR/niri $HOME/.config/
+systemctl --user add-wants niri.service waybar.service
+
+
 # greetd (for sway)
 if [ -d /etc/greetd ]; then
     sudo rm /etc/greetd/config.toml

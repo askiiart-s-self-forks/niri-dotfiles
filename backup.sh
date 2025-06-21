@@ -63,6 +63,10 @@ width=$(echo $outputs | jq -r .[0].modes.[0].width)
 height=$(echo $outputs | jq -r .[0].modes.[0].height)
 sed -i "s/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/${width}x${height}\.png\"/set \$lockwall \"swaylock -i ~\/\.config\/sway\/backgrounds\/widthxheight\.png\"/g" $GIT_DIR/sway/config
 
+# niri
+rm -rf $GIT_DIR/niri
+cp -r $HOME/.config/niri/ .
+
 # greetd (for sway)
 if [ -d /etc/greetd ]; then
     rm -rf $GIT_DIR/greetd/
