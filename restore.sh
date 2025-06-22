@@ -89,7 +89,9 @@ mkdir -p $HOME/.config/fontconfig/conf.d/
 cp -r $GIT_DIR/fontconfig/* $HOME/.config/fontconfig/conf.d/
 
 # waybar
+# i have no idea why this is here and my waybar config is in my home dir anyways, but only for this script, not the niri one??? but whatever
 if ! command_exists "dnf"; then
+    echo hi
     rm -rf $HOME/.config/waybar/
     mkdir $HOME/.config/waybar/
     cp -r $GIT_DIR/waybar/* $HOME/.config/waybar/
