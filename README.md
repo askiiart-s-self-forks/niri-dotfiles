@@ -34,3 +34,5 @@ My dotfiles for:
 It's unlikely I'll switch to niri, as I'm quite a fan of not being limited to however-many-workspaces-are-in-use-plus-one, and don't really care for the tiling, it just doesn't fit me quite as well. But I do very much like some aspects of it, so I might come back and configure it even more or something.
 
 Also, X11 via xwayland-satellite doesn't seem to be working? And I have no idea why.
+
+Update: I've been told to add Sylveon. So I am adding Sylveon.

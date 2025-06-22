@@ -52,6 +52,7 @@ rm -rf $HOME/.config/niri
 cp -r $GIT_DIR/niri $HOME/.config/
 systemctl --user add-wants niri.service waybar.service
 systemctl --user add-wants niri.service swaync.service
+exec $GIT_DIR/niri/backgrounds/bg-generation.sh
 
 # greetd (for sway)
 if [ -d /etc/greetd ]; then
@@ -81,6 +82,11 @@ gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
     sudo cp $GIT_DIR/systemd/fix-gamepad.service /etc/systemd/system/
     #sudo systemctl enable --now fix-gamepad.service
+fi
+
+# user systemd services
+if ! command_exists "nixos-rebuild" && command_exists "systemctl"; then
+    cp $GIT_DIR/user-systemd/* ~/.config/systemd/user/
 fi
 
 # fontconfig

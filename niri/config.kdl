@@ -404,7 +404,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm-gui"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "sh" "-c" "swaylock -i ~/.config/niri/backgrounds/widthxheight.png"; }
-    Scroll_Lock hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Scroll_Lock hotkey-overlay-title="Lock the Screen: swaylock" { spawn "sh" "-c" "swaylock -i ~/.config/niri/backgrounds/widthxheight.png"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
