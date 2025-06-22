@@ -1,9 +1,0 @@
-[Unit]
-Description=xwayland-satellite on start for niri
-PartOf=graphical-session.target
-After=graphical-session.target
-Requisite=graphical-session.target
-
-[Service]
-ExecStart=/usr/bin/xwayland-satellite ':3'
-Restart=on-failure

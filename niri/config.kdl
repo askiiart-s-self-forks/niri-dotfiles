@@ -690,7 +690,7 @@ binds {
 }
 
 environment {
-    DISPLAY ":3"
+    // DISPLAY ":3"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     _JAVA_AWT_WM_NONREPARENTING "1"
 }
@@ -699,7 +699,7 @@ switch-events {
     lid-close { spawn "systemctl" "suspend"; }
 }
 
-spawn-at-startup "xwayland-satellite" ":3";
+// spawn-at-startup "xwayland-satellite" ":3";
 
 clipboard {
     disable-primary
